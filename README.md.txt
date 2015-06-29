@@ -1,0 +1,1 @@
+This is an app for translating latin character to sundanese or vice versa

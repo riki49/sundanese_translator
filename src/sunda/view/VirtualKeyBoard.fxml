@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="223.0"
+	prefWidth="826.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="sunda.controller.VirtualKeyBoardController">
+	<children>
+		<Button layoutX="756.0" layoutY="178.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="kha" />
+		<Button layoutX="259.0" layoutY="12.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="4" />
+		<Button layoutX="197.0" layoutY="12.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="3" />
+		<Button layoutX="135.0" layoutY="12.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="2" />
+		<Button layoutX="73.0" layoutY="12.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="1" />
+		<Button layoutX="631.0" layoutY="12.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="0" />
+		<Button layoutX="507.0" layoutY="12.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="8" />
+		<Button layoutX="445.0" layoutY="12.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="7" />
+		<Button layoutX="383.0" layoutY="12.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="6" />
+		<Button layoutX="321.0" layoutY="12.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="5" />
+		<Button layoutX="756.0" layoutY="95.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="nga" />
+		<Button layoutX="72.0" layoutY="53.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="qa" />
+		<Button layoutX="631.0" layoutY="53.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="pa" />
+		<Button layoutX="568.0" layoutY="53.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="o" />
+		<Button layoutX="506.0" layoutY="53.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="i" />
+		<Button layoutX="444.0" layoutY="53.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="u" />
+		<Button layoutX="382.0" layoutY="53.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="ya" />
+		<Button layoutX="320.0" layoutY="53.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="ta" />
+		<Button layoutX="258.0" layoutY="53.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="ra" />
+		<Button layoutX="196.0" layoutY="53.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="e" />
+		<Button layoutX="134.0" layoutY="53.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="wa" />
+		<Button layoutX="73.0" layoutY="95.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="a" />
+		<Button layoutX="569.0" layoutY="95.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="la" />
+		<Button layoutX="507.0" layoutY="95.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="ka" />
+		<Button layoutX="445.0" layoutY="95.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="ja" />
+		<Button layoutX="383.0" layoutY="95.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="ha" />
+		<Button layoutX="321.0" layoutY="95.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="ga" />
+		<Button layoutX="259.0" layoutY="95.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="fa" />
+		<Button layoutX="197.0" layoutY="95.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="da" />
+		<Button layoutX="135.0" layoutY="95.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="sa" />
+		<Button layoutX="444.0" layoutY="137.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="na" />
+		<Button layoutX="382.0" layoutY="137.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="ba" />
+		<Button layoutX="320.0" layoutY="137.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="va" />
+		<Button layoutX="258.0" layoutY="137.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="ca" />
+		<Button layoutX="197.0" layoutY="137.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="xa" />
+		<Button layoutX="135.0" layoutY="137.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="za" />
+		<Button disable="true" layoutX="11.0" layoutY="137.0"
+			mnemonicParsing="false" onAction="#handleCharButton" prefHeight="41.0"
+			prefWidth="62.0" text="pmngkl" />
+		<Button layoutX="756.0" layoutY="137.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="nya" />
+		<Button disable="true" layoutX="11.0" layoutY="178.0"
+			mnemonicParsing="false" onAction="#handleCharButton" prefHeight="41.0"
+			prefWidth="62.0" text="panyiku" />
+		<Button fx:id="pamaeh" disable="true" layoutX="73.0" layoutY="178.0"
+			mnemonicParsing="false" onAction="#handleOnClickPamaehButton" prefHeight="41.0"
+			prefWidth="62.0" text="pamaeh" />
+		<Button layoutX="506.0" layoutY="137.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="ma" />
+		<Button disable="true" layoutX="197.0" layoutY="178.0"
+			mnemonicParsing="false" onAction="#handleCharButton" prefHeight="41.0"
+			prefWidth="62.0" text="_wa" />
+		<Button layoutX="569.0" layoutY="137.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="leu" />
+		<Button disable="true" layoutX="135.0" layoutY="178.0"
+			mnemonicParsing="false" onAction="#handleCharButton" prefHeight="41.0"
+			prefWidth="62.0" text="_ma" />
+		<Button layoutX="261.0" layoutY="178.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="244.0" />
+		<Button layoutX="756.0" layoutY="53.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="sya" />
+		<Button layoutX="569.0" layoutY="12.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="9" />
+		<Button disable="true" layoutX="693.0" layoutY="12.0"
+			mnemonicParsing="false" onAction="#handleCharButton" prefHeight="41.0"
+			prefWidth="62.0" text="pnghlu" />
+		<Button disable="true" layoutX="631.0" layoutY="137.0"
+			mnemonicParsing="false" onAction="#handleCharButton" prefHeight="41.0"
+			prefWidth="62.0" text="pnlong" />
+		<Button layoutX="630.0" layoutY="178.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="k" />
+		<Button layoutX="693.0" layoutY="178.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="m" />
+		<Button disable="true" layoutX="11.0" layoutY="95.0"
+			mnemonicParsing="false" onAction="#handleCharButton" prefHeight="41.0"
+			prefWidth="62.0" text="pnykra" />
+		<Button disable="true" layoutX="693.0" layoutY="53.0"
+			mnemonicParsing="false" onAction="#handleCharButton" prefHeight="41.0"
+			prefWidth="62.0" text="pnleung" />
+		<Button disable="true" layoutX="631.0" layoutY="95.0"
+			mnemonicParsing="false" onAction="#handleCharButton" prefHeight="41.0"
+			prefWidth="62.0" text="pnyuku" />
+		<Button layoutX="756.0" layoutY="12.0" mnemonicParsing="false"
+			onAction="#deleteButton" prefHeight="41.0" prefWidth="62.0" text="pupus" />
+		<Button disable="true" layoutX="693.0" layoutY="137.0"
+			mnemonicParsing="false" onAction="#handleCharButton" prefHeight="41.0"
+			prefWidth="62.0" text="pnle'ng" />
+		<Button disable="true" layoutX="693.0" layoutY="95.0"
+			mnemonicParsing="false" onAction="#handleCharButton" prefHeight="41.0"
+			prefWidth="62.0" text="pmepet" />
+		<Button layoutX="507.0" layoutY="178.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="bha" />
+		<Button layoutX="568.0" layoutY="178.0" mnemonicParsing="false"
+			onAction="#handleCharButton" prefHeight="41.0" prefWidth="62.0" text="reu" />
+		<Button layoutX="11.0" layoutY="12.0" mnemonicParsing="false"
+			onAction="#handleSubmitButton" prefHeight="41.0" prefWidth="62.0"
+			text="atos" textFill="#11f50a" />
+		<Button disable="true" layoutX="10.0" layoutY="53.0"
+			mnemonicParsing="false" onAction="#handleCharButton" prefHeight="41.0"
+			prefWidth="62.0" text="panyck" />
+		<Button disable="true" layoutX="73.0" layoutY="137.0"
+			mnemonicParsing="false" onAction="#handleCharButton" prefHeight="41.0"
+			prefWidth="62.0" text="pngwsd" />
+	</children>
+</AnchorPane>
