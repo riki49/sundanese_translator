@@ -18,94 +18,32 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.fxml.Initializable;
-import sunda.util.ChekerHelpingChar;
-import sunda.util.LatinTranslator;
+import sunda.util.ChekHanacaraka;
+import sunda.util.TranslatorFromInputUser;
+import sunda.util.TranslatorFromSundaneseFont;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 
 public class MainFormController implements Initializable {
-
 	@FXML
-	private TextArea inputTextArea;
+	private int translate = 0;
+	public TextArea inputTextArea;
 	public TextArea resultTranslate;
 	private Stage stage;
-	private List<String> textSundaneseToBeTranslatedList; // struktur data untuk memenggal string unicode per kata
-	private List<String> sundaneseCharacterList;
-	private List<String> latinCharacterList;
-	private int translate;
+	private List<String> sundaneseCharList;
+	private List<String> textSundaneseToBeTranslatedList;
+	/*
+	 * struktur data untuk menyimpan string unicode per kata
+	 */
+
+	@FXML
+	private Text translatingMode;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		this.textSundaneseToBeTranslatedList = new ArrayList<>();
-		this.sundaneseCharacterList = new ArrayList<>();
-		this.latinCharacterList = new ArrayList<>();
-	}
-
-	@FXML
-	public void handleNgalagenaToLatin() {
-		try {
-			translate = 1;
-			this.stage = new Stage();
-			FXMLLoader fxmlLoader = new FXMLLoader();
-			AnchorPane root = (AnchorPane) fxmlLoader
-					.load(ClassLoader
-							.getSystemResourceAsStream("sunda/view/VirtualKeyBoard.fxml"));
-			Scene scene = new Scene(root);
-			stage.initModality(Modality.APPLICATION_MODAL);
-			stage.initStyle(StageStyle.UNDECORATED);
-			stage.setScene(scene);
-			stage.setResizable(false);
-			stage.setX(500);
-			stage.setY(450);
-
-			VirtualKeyBoardController virtualKeyBoardController = (VirtualKeyBoardController) fxmlLoader
-					.getController();
-			virtualKeyBoardController.setInputTextArea(this.inputTextArea);
-			virtualKeyBoardController.setStage(stage);
-			virtualKeyBoardController.setLatinCharacterList(this.latinCharacterList);
-			virtualKeyBoardController
-					.setSundaneseCharacterList
-					(this.textSundaneseToBeTranslatedList); // passing referensi ke virtualkeyboard controller
-
-			this.resultTranslate.setText("");
-			stage.showAndWait();
-			stage.sizeToScene();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	public void handleTranslateToLatinButton() {
-		this.stage.close();
-		this.inputTextArea.setEditable(true);
-		this.inputTextArea.clear();
-		this.resultTranslate.setText("");
-		translate = 0;
-	}
-
-	@FXML
-	public void translateButton() {
-		if (translate == 1) {
-			LatinTranslator latinTranslator = new LatinTranslator();
-			this.latinCharacterList
-					.forEach(string -> this.resultTranslate
-							.appendText(latinTranslator.translate(string)));
-			this.latinCharacterList.clear();
-		} else {
-			ChekerHelpingChar chekerHelpingChar = new ChekerHelpingChar();
-			int stringLenght = inputTextArea.getLength();
-			int startString = 0;
-			int endString = 1;
-			for (int i = 0; i < stringLenght; i++) {
-				sundaneseCharacterList.add(chekerHelpingChar
-						.cheker(inputTextArea.getText(startString, endString)));
-				startString = startString + 1;
-				endString = endString + 1;
-			}
-			sundaneseCharacterList.forEach(text -> resultTranslate
-					.appendText(text));
-			sundaneseCharacterList.clear();
-		}
+		this.sundaneseCharList = new ArrayList<>();
 	}
 
 	@FXML
@@ -118,9 +56,7 @@ public class MainFormController implements Initializable {
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();
-
 		} catch (IOException e) {
-
 			e.printStackTrace();
 		}
 	}
@@ -130,4 +66,153 @@ public class MainFormController implements Initializable {
 		Platform.exit();
 	}
 
+	@FXML
+	public void handleNgalagenaToLatin() {
+		try {
+			//this.translatingMode.setText("tina sunda");
+			translate = 1;
+			this.stage = new Stage();
+			FXMLLoader fxmlLoader = new FXMLLoader();
+
+			AnchorPane root = (AnchorPane) fxmlLoader
+					.load(ClassLoader
+							.getSystemResourceAsStream("sunda/view/VirtualKeyBoard.fxml"));
+
+			Scene scene = new Scene(root);
+			stage.initModality(Modality.APPLICATION_MODAL);
+			stage.initStyle(StageStyle.UNDECORATED);
+			stage.setScene(scene);
+			stage.setResizable(false);
+			stage.setX(0);
+			stage.setY(430);
+
+			/*
+			 * nu hanap palagi passing referensi ke virtualkeyboard controller 
+			 */
+			VirtualKeyBoardController virtualKeyBoardController = (VirtualKeyBoardController) fxmlLoader
+					.getController();
+			virtualKeyBoardController.setInputTextArea(this.inputTextArea);
+			//			virtualKeyBoardController.setTranslatingModeText(this.translatingMode.getText());
+			virtualKeyBoardController.setStage(stage);
+			virtualKeyBoardController
+			.setTextToBeTranslated(this.textSundaneseToBeTranslatedList);
+
+			this.resultTranslate.setText("");
+			stage.showAndWait();
+			stage.sizeToScene();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@FXML
+	public void translateButton() {
+		switch (translate) {
+		case 1:
+			TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
+			textSundaneseToBeTranslatedList
+			.forEach(string -> this.resultTranslate
+					.appendText(translatorFromSundaneseFont
+							.translate(string)));
+			textSundaneseToBeTranslatedList.clear();
+			inputTextArea.setEditable(true);
+			break;
+		case 0:
+			/*
+			 * deklarasi
+			 */
+
+			TranslatorFromInputUser translatorFromInputUser = new TranslatorFromInputUser();
+			ChekHanacaraka chekHanacaraka = new ChekHanacaraka();
+			String stringLenght = inputTextArea.getText();
+			int isLenght = stringLenght.length();
+			int i = isLenght;
+			System.out.println("masuk kana case 0");
+			System.out.println("panjangna = " + isLenght);
+			System.out.println("mulai !!!\n");
+			sundaneseCharList.clear();
+
+			for (i = isLenght; i > 0; ) {
+				int startString = 0;
+				System.out.println("masuk kana for");
+				System.out.println("i na = " + i);
+
+				boolean isFourChar = false;
+				String getFourChar = null;
+				boolean isThreeChar = false;
+				String getThreeChar = null;
+				boolean isTwoChar = false;
+				String getTwoChar = null;
+				String getSinggleChar = null;
+
+				if (isLenght >= 4) {
+					int starLocal4 = startString;
+					int endLocal4 = startString + 4;
+					getFourChar = inputTextArea.getText(starLocal4, endLocal4)
+							.toLowerCase();
+					isFourChar = chekHanacaraka.isFourChar(getFourChar);
+				}
+				if (isLenght >= 3 && isFourChar == false) {
+					int startLocal3 = startString;
+					int endLocal3 = startString + 3;
+					getThreeChar = inputTextArea.getText(startLocal3, endLocal3)
+							.toLowerCase();
+					isThreeChar = chekHanacaraka.isTripleChar(getThreeChar);
+				}
+				if (isLenght >= 2 && isThreeChar == false && isFourChar == false) {
+					int startLocal2 = startString;
+					int endLocal2 = startString + 2;
+					getTwoChar = inputTextArea.getText(startLocal2, endLocal2)
+							.toLowerCase();
+					isTwoChar = chekHanacaraka.isDoubleChar(getTwoChar);
+				}
+				if (isLenght >= 1 && isTwoChar == false && isThreeChar == false
+						&& isFourChar == false){
+					int starLocal1 = startString;
+					int endLocal1 = startString + 1;
+					getSinggleChar = inputTextArea.getText(starLocal1, endLocal1)
+							.toLowerCase();
+					chekHanacaraka.isSinggleChar(getSinggleChar);
+				}
+				System.out.println("beres ngacek");
+
+				if (isFourChar == true) {
+					String returnFourChar = translatorFromInputUser.fourCharacter(getFourChar);
+					sundaneseCharList.add(returnFourChar);
+					startString = startString + 4;
+					i = i - 4;
+					System.out.println("asup kana 4");
+					System.out.println("i pulang dikurang " + i);
+				} else if (isThreeChar == true) {
+					String returnThreeChar = translatorFromInputUser.tripleChar(getThreeChar);
+					sundaneseCharList.add(returnThreeChar);
+					startString = startString + 3;
+					i = i - 3;
+					System.out.println("asup kana 3");
+				} else if (isTwoChar == true) {
+					String returnTwoChar = translatorFromInputUser.doubleCharacter(getTwoChar);
+					sundaneseCharList.add(returnTwoChar);
+					startString = startString + 2;
+					i = i - 2;
+					System.out.println("asup kana 2");
+				} else {
+					String returnSinggleChar = translatorFromInputUser
+							.singgleChar(getSinggleChar);
+					sundaneseCharList.add(returnSinggleChar);
+					i = i - 1;
+					System.out.println("asup kana 1");
+				}
+				
+
+				System.out.println("beres tina for");
+				System.out.println("hurufna = " + sundaneseCharList);
+				resultTranslate.setText(sundaneseCharList.toString());
+				translate = 0;
+				this.inputTextArea.setEditable(true);
+			}
+			/*
+			 * batas
+			 */
+		}
+	}
 }

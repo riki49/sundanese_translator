@@ -1,6 +1,6 @@
 package sunda.util;
 
-public class LatinTranslator {
+public class TranslatorFromSundaneseFont {
 	public String translate(String ngalagena) {
 		switch (ngalagena.toLowerCase()) {
 		case "\u1b83":
@@ -10,12 +10,12 @@ public class LatinTranslator {
 		case "\u1b85":
 			return "u";
 		case "\u1b86":
-			return "e'";
+			return "é";
 		case "\u1b87":
 			return "o";
 		case "\u1b88":
 			return "e";
-		case "\u1b889":
+		case "\u1b89":
 			return "eu";
 		case "\u1b8a":
 			return "ka";
@@ -101,6 +101,8 @@ public class LatinTranslator {
 			return "\u1ba6";
 		case "pnlong":
 			return "\u1ba7";
+		case "pnglyar":
+			return "\u1b81";
 		case "_ma":
 			return "\u1bac";
 		case "_wa":

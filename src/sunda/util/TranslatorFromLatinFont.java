@@ -1,20 +1,14 @@
 package sunda.util;
 
-public class SundaneseFontTranslator {
+public class TranslatorFromLatinFont {
 
-	private String sundaneseCharacter;
-
-	public SundaneseFontTranslator(String sundaneseCharacter) {
-		this.sundaneseCharacter = sundaneseCharacter;
-	}
-
-	public String translate() {
-		switch (this.sundaneseCharacter) {
-		case "panyck":
+	public String translate(String latinFont) {
+		switch (latinFont.toLowerCase()) {
+		case "panyecek":
 			return "\u1b80";
-		case "pnglyr":
+		case "pnglayar":
 			return "\u1b81";
-		case "pngwsd":
+		case "pngwisad":
 			return "\u1b82";
 		case "a":
 			return "\u1b83";
@@ -22,14 +16,14 @@ public class SundaneseFontTranslator {
 			return "\u1b84";
 		case "u":
 			return "\u1b85";
-		case "e'":
-			return "\u1b86";
 		case "o":
 			return "\u1b87";
+		case "é":
+			return "\u1b86";
 		case "e":
 			return "\u1b88";
 		case "eu":
-			return "\u1b889";
+			return "\u1b89";
 		case "ka":
 			return "\u1b8a";
 		case "qa":
@@ -100,25 +94,25 @@ public class SundaneseFontTranslator {
 			return "\u1bb8";
 		case "9":
 			return "\u1bb9";
-		case "pmngkl":
+		case "pmingkal":
 			return "\u1ba1";
-		case "pnykra":
+		case "panyakra":
 			return "\u1ba2";
 		case "panyiku":
 			return "\u1ba3";
-		case "pnghlu":
+		case "panghulu":
 			return "\u1ba4";
-		case "pnyuku":
+		case "panyuku":
 			return "\u1ba5";
-		case "pnle'ng":
+		case "panéléng":
 			return "\u1ba6";
-		case "pnlong":
+		case "panolong":
 			return "\u1ba7";
-		case "pmepet":
+		case "pamepet":
 			return "\u1ba8";
-		case "pnleung":
+		case "pneleung":
 			return "\u1ba9";
-		case "pamaeh":
+		case "pamaéh":
 			return "\u1baa";
 		case "_ma":
 			return "\u1bac";
@@ -137,33 +131,6 @@ public class SundaneseFontTranslator {
 		case "m":
 			return "\u1bbf";
 		}
-		return this.sundaneseCharacter;
-	}
-
-	public boolean isHanacaraka() {
-		return this.sundaneseCharacter.equals("ha")
-				|| sundaneseCharacter.equals("na")
-				|| sundaneseCharacter.equals("ca")
-				|| sundaneseCharacter.equals("ra")
-				|| sundaneseCharacter.equals("ka")
-				|| sundaneseCharacter.equals("da")
-				|| sundaneseCharacter.equals("ta")
-				|| sundaneseCharacter.equals("sa")
-				|| sundaneseCharacter.equals("wa")
-				|| sundaneseCharacter.equals("la")
-				|| sundaneseCharacter.equals("nga")
-				|| sundaneseCharacter.equals("ba")
-				|| sundaneseCharacter.equals("nya")
-				|| sundaneseCharacter.equals("ta")
-				|| sundaneseCharacter.equals("qa")
-				|| sundaneseCharacter.equals("ga")
-				|| sundaneseCharacter.equals("ja")
-				|| sundaneseCharacter.equals("za")
-				|| sundaneseCharacter.equals("pa")
-				|| sundaneseCharacter.equals("fa")
-				|| sundaneseCharacter.equals("va")
-				|| sundaneseCharacter.equals("ma")
-				|| sundaneseCharacter.equals("ya")
-				|| sundaneseCharacter.equals("xa");
+		return latinFont;
 	}
 }

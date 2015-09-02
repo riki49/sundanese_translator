@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0"
+	prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="sunda.controller.VirtualKeyBoardController">
+	<children>
+		<Button layoutX="452.0" layoutY="10.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="᮴" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="340.0" layoutY="10.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="᮳" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="121.0" layoutY="10.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="᮱" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="1123.0" layoutY="9.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="᮰" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="903.0" layoutY="10.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="᮸" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="789.0" layoutY="10.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="᮷" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="676.0" layoutY="10.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="᮶" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="563.0" layoutY="10.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="᮵" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="1013.0" layoutY="169.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮍ" textFill="#e13a93">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="120.0" layoutY="64.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮋ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="1123.0" layoutY="63.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮕ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="1013.0" layoutY="63.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮇ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="902.0" layoutY="64.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮄ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="788.0" layoutY="64.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮅ" textFill="#171617">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="675.0" layoutY="64.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮚ" textFill="#07deef">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="562.0" layoutY="64.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮒ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="451.0" layoutY="64.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮛ" textFill="#0af53d">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="339.0" layoutY="64.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮈ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="228.0" layoutY="64.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮝ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="121.0" layoutY="117.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮃ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="1013.0" layoutY="116.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮜ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="903.0" layoutY="117.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮊ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="789.0" layoutY="117.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮏ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="676.0" layoutY="117.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮠ" textFill="#f4df09">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="563.0" layoutY="117.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮌ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="452.0" layoutY="117.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮖ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="340.0" layoutY="117.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮓ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="229.0" layoutY="117.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮞ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="788.0" layoutY="170.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮔ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="675.0" layoutY="170.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮘ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="562.0" layoutY="170.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮗ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="451.0" layoutY="170.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮎ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="340.0" layoutY="170.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮟ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="229.0" layoutY="170.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮐ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="1123.0" layoutY="116.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮑ" textFill="#07deef">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="902.0" layoutY="170.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮙ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="453.0" layoutY="224.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="434.0">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="1013.0" layoutY="9.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="᮹" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button disable="false" layoutX="10.0" layoutY="117.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="ᮤ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button disable="true" layoutX="11.0" layoutY="170.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="ᮡ"
+			textFill="#07deef">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button disable="true" layoutX="11.0" layoutY="223.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="ᮣ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button disable="false" layoutX="10.0" layoutY="64.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="᮪"
+			textFill="#f50808">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button disable="true" layoutX="904.0" layoutY="226.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="ᮧ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button disable="true" layoutX="121.0" layoutY="170.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="ᮢ"
+			textFill="#0af53d">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button disable="true" layoutX="1237.0" layoutY="224.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="ᮩ"
+			textFill="#f407f3">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button disable="false" layoutX="229.0" layoutY="223.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="ᮥ"
+			textFill="#171617">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button disable="false" layoutX="1124.0" layoutY="224.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="ᮦ"
+			textFill="#6a04f7">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="1236.0" layoutY="62.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="pupus" textFill="#f50808">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button disable="true" layoutX="340.0" layoutY="223.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="ᮨ">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="1236.0" layoutY="8.0" mnemonicParsing="false"
+			onAction="#handleSubmitButton" prefHeight="50.0" prefWidth="100.0"
+			text="atos" textFill="#037193">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button disable="true" layoutX="1014.0" layoutY="225.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="ᮀ"
+			textFill="#e13a93">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button disable="true" layoutX="121.0" layoutY="223.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="ᮂ"
+			textFill="#f4df09">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="1123.0" layoutY="169.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮆ" textFill="#6a04f7">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="1236.0" layoutY="168.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="ᮉ" textFill="#f407f3">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="1236.0" layoutY="115.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="laten" textFill="#900af5">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button layoutX="229.0" layoutY="10.0" mnemonicParsing="false"
+			prefHeight="50.0" prefWidth="100.0" text="᮲" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+		<Button disable="false" layoutX="10.0" layoutY="10.0"
+			mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="ᮁ"
+			textFill="#0af53d">
+			<font>
+				<Font name="Sundanese Unicode" size="20.0" />
+			</font>
+		</Button>
+	</children>
+</AnchorPane>
