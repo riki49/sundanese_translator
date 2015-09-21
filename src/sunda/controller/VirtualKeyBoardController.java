@@ -103,17 +103,51 @@ public class VirtualKeyBoardController implements Initializable {
 	Button maButton;
 	@FXML
 	Button spasiButton;
+	@FXML
+	Button aButton;
+	@FXML
+	Button iButton;
+	@FXML
+	Button ÈButton;
+	@FXML
+	Button eButton;
+	@FXML
+	Button euButton;
+	@FXML
+	Button uButton;
+	@FXML
+	Button oButton;
+	@FXML
+	Button zeroButton;
+	@FXML
+	Button oneButton;
+	@FXML
+	Button twoButton;
+	@FXML
+	Button threeButton;
+	@FXML
+	Button fourButton;
+	@FXML
+	Button fiveButton;
+	@FXML
+	Button sixButton;
+	@FXML
+	Button sevenButton;
+	@FXML
+	Button eightButton;
+	@FXML
+	Button nineButton;
 	private List<Button> hanacarakaList;
 	private List<Button> metaCharacterList;
 	private List<Button> specialMetaCharacter;
+	private List<Button> vocalAndNumberCharacter;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+
 		this.metaCharacterList = Arrays.asList(this.pamaehButton, this.pamepetButton,
-				this.panelengButton,
-				this.paneuleungButton, this.panghuluButton, this.panolongButton,
-				this.panyukuButton);
+				this.panelengButton, this.paneuleungButton, this.panghuluButton,
+				this.panolongButton, this.panyukuButton);
 		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		this.specialMetaCharacter = Arrays.asList(this.pamingkalButton,
@@ -129,6 +163,14 @@ public class VirtualKeyBoardController implements Initializable {
 				this.vaButton, this.waButton, this.waButton, this.xaButton,
 				this.yaButton, this.zaButton);
 
+		this.vocalAndNumberCharacter = Arrays.asList(this.aButton, this.eButton, this.iButton,
+				this.ÈButton, this.uButton, this.oButton, this.euButton, this.zeroButton,
+				this.oneButton, this.twoButton, this.threeButton, this.fourButton, this.fiveButton,
+				this.sixButton, this.sevenButton, this.eightButton, this.nineButton);
+	}
+
+	public void vocalChar (ActionEvent actionEvent) {
+
 	}
 
 	public void spaceButton (ActionEvent actionEvent) {
@@ -139,17 +181,24 @@ public class VirtualKeyBoardController implements Initializable {
 		this.specialMetaCharacter.forEach(specialMetaCharacter -> 
 		specialMetaCharacter.setDisable(true));
 	}
-	
+
 	public void handleCharButton(ActionEvent actionEvent) {
 
 		Button sourceButton = (Button) actionEvent.getSource();
 		boolean isHanacaraka = this.hanacarakaList.stream().anyMatch(
 				p -> p.getText().equalsIgnoreCase(sourceButton.getText()));
+		boolean isVocalChar = this.vocalAndNumberCharacter.stream().anyMatch
+				(p -> p.getText().equalsIgnoreCase(sourceButton.getText()));
 		if (isHanacaraka) {
 			this.specialMetaCharacter.forEach(specialMetaCharacter -> specialMetaCharacter
 					.setDisable(false));
 			this.metaCharacterList.forEach(metaCharacter -> metaCharacter
 					.setDisable(false));
+		} else if (isVocalChar){
+			this.specialMetaCharacter.forEach(specialMetaCharacter -> specialMetaCharacter
+					.setDisable(true));
+			this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+					.setDisable(true));
 		}
 		/*
 		 * simpan setiap click Sundanese character ke dalam list
@@ -184,9 +233,6 @@ public class VirtualKeyBoardController implements Initializable {
 			stage.setResizable(false);
 			stage.setX(550);
 			stage.setY(450);
-			// VirtualSundaneseKeyBoardControler
-			// virtualSundaneseKeyBoardControler =
-			// (VirtualSundaneseKeyBoardControler)fxmlLoader.getController();
 			stage.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -194,7 +240,7 @@ public class VirtualKeyBoardController implements Initializable {
 	}
 
 	public void handleSubmitButton() {
-//		this.inputTextArea.setEditable(true);
+		//		this.inputTextArea.setEditable(true);
 		this.stage.close();
 	}
 
@@ -213,7 +259,7 @@ public class VirtualKeyBoardController implements Initializable {
 		String newString = oldString.substring(0, oldString.length() - 1);
 
 		this.textToBeTranslatedList
-				.remove(this.textToBeTranslatedList.size() - 1);
+		.remove(this.textToBeTranslatedList.size() - 1);
 		/*
 		 * hapus item di index terakhir list
 		 */
@@ -233,13 +279,13 @@ public class VirtualKeyBoardController implements Initializable {
 		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
-																// terakhir
+		// terakhir
 		String lastIndexFromResul = translatorFromSundaneseFont
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
 		this.textToBeTranslatedList
-				.remove(this.textToBeTranslatedList.size() - 1);
+		.remove(this.textToBeTranslatedList.size() - 1);
 		this.textToBeTranslatedList.add(singleCharFromPamaeh);
 	}
 
@@ -254,13 +300,13 @@ public class VirtualKeyBoardController implements Initializable {
 		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
-																// terakhir
+		// terakhir
 		String lastIndexFromResul = translatorFromSundaneseFont
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
 		this.textToBeTranslatedList
-				.remove(this.textToBeTranslatedList.size() - 1);
+		.remove(this.textToBeTranslatedList.size() - 1);
 		this.textToBeTranslatedList.add(singleCharFromPamaeh + "i");
 
 	}
@@ -276,13 +322,13 @@ public class VirtualKeyBoardController implements Initializable {
 		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
-																// terakhir
+		// terakhir
 		String lastIndexFromResul = translatorFromSundaneseFont
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
 		this.textToBeTranslatedList
-				.remove(this.textToBeTranslatedList.size() - 1);
+		.remove(this.textToBeTranslatedList.size() - 1);
 		this.textToBeTranslatedList.add(singleCharFromPamaeh + "u");
 	}
 
@@ -297,7 +343,7 @@ public class VirtualKeyBoardController implements Initializable {
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
 		this.textToBeTranslatedList
-				.remove(this.textToBeTranslatedList.size() - 1);
+		.remove(this.textToBeTranslatedList.size() - 1);
 		this.textToBeTranslatedList.add(singleCharFromPamaeh + "È");
 
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
@@ -334,13 +380,13 @@ public class VirtualKeyBoardController implements Initializable {
 		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
-																// terakhir
+		// terakhir
 		String lastIndexFromResul = translatorFromSundaneseFont
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
 		this.textToBeTranslatedList
-				.remove(this.textToBeTranslatedList.size() - 1);
+		.remove(this.textToBeTranslatedList.size() - 1);
 		this.textToBeTranslatedList.add(singleCharFromPamaeh + "eu");
 	}
 
@@ -355,13 +401,13 @@ public class VirtualKeyBoardController implements Initializable {
 		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
-																// terakhir
+		// terakhir
 		String lastIndexFromResul = translatorFromSundaneseFont
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
 		this.textToBeTranslatedList
-				.remove(this.textToBeTranslatedList.size() - 1);
+		.remove(this.textToBeTranslatedList.size() - 1);
 		this.textToBeTranslatedList.add(singleCharFromPamaeh + "o");
 	}
 
@@ -381,7 +427,7 @@ public class VirtualKeyBoardController implements Initializable {
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
 		this.textToBeTranslatedList
-				.remove(this.textToBeTranslatedList.size() - 1);
+		.remove(this.textToBeTranslatedList.size() - 1);
 		this.textToBeTranslatedList.add(singleCharFromPamaeh + "e");
 	}
 
@@ -405,7 +451,7 @@ public class VirtualKeyBoardController implements Initializable {
 		String singleLastChar = lastIndexFromResul.substring(lastIndexFromResul
 				.length() -1, lastIndexFromResul.length());
 		this.textToBeTranslatedList
-				.remove(this.textToBeTranslatedList.size() - 1);
+		.remove(this.textToBeTranslatedList.size() - 1);
 		this.textToBeTranslatedList.add(singleCharFromPamaeh + "y" + singleLastChar);
 	}
 
@@ -422,7 +468,7 @@ public class VirtualKeyBoardController implements Initializable {
 		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
-																// terakhir
+		// terakhir
 		String lastIndexFromResul = translatorFromSundaneseFont
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
@@ -430,7 +476,7 @@ public class VirtualKeyBoardController implements Initializable {
 		String singleLastChar = lastIndexFromResul.substring(lastIndexFromResul
 				.length() -1, lastIndexFromResul.length());
 		this.textToBeTranslatedList
-				.remove(this.textToBeTranslatedList.size() - 1);
+		.remove(this.textToBeTranslatedList.size() - 1);
 		this.textToBeTranslatedList.add(singleCharFromPamaeh + "r" + singleLastChar);
 	}
 
@@ -447,7 +493,7 @@ public class VirtualKeyBoardController implements Initializable {
 		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
-																// terakhir
+		// terakhir
 		String lastIndexFromResul = translatorFromSundaneseFont
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
@@ -455,7 +501,7 @@ public class VirtualKeyBoardController implements Initializable {
 		String singleLastChar = lastIndexFromResul.substring(lastIndexFromResul
 				.length() -1, lastIndexFromResul.length());
 		this.textToBeTranslatedList
-				.remove(this.textToBeTranslatedList.size() - 1);
+		.remove(this.textToBeTranslatedList.size() - 1);
 		this.textToBeTranslatedList.add(singleCharFromPamaeh + "l" + singleLastChar);
 	}
 
@@ -499,6 +545,6 @@ public class VirtualKeyBoardController implements Initializable {
 	}
 
 	public void setTranslatingModeText(String tranlatingModeText) {
-		
+
 	}
 }

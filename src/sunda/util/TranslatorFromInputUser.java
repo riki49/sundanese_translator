@@ -349,47 +349,47 @@ public class TranslatorFromInputUser {
 		 * e`
 		 */
 	case "ke`":
-		return "\u1b8a" + "\u1ba6";
+		return "\u1ba6" + "\u1b8a";
 	case "qe`":
-		return "\u1b8b" + "\u1ba6";
+		return "\u1ba6" +  "\u1b8b";
 	case "ge`":
-		return "\u1b8c" + "\u1ba6";
+		return "\u1ba6" +  "\u1b8c";
 	case "ce`":
-		return "\u1b8e" + "\u1ba6";
+		return "\u1ba6" +  "\u1b8e";
 	case "je`":
-		return "\u1b8f" + "\u1ba6";
+		return "\u1ba6" +  "\u1b8f";
 	case "ze`":
-		return "\u1b90" + "\u1ba6";
+		return "\u1ba6" + "\u1b90";
 	case "te`":
-		return "\u1b92" + "\u1ba6";
+		return "\u1ba6" + "\u1b92";
 	case "de`":
-		return "\u1b93" + "\u1ba6";
+		return "\u1ba6" + "\u1b93";
 	case "ne`":
-		return "\u1b94" + "\u1ba6";
+		return "\u1ba6" + "\u1b94";
 	case "pe`":
-		return "\u1b95" + "\u1ba6";
+		return "\u1ba6" + "\u1b95";
 	case "fe`":
-		return "\u1b96" + "\u1ba6";
+		return "\u1ba6" + "\u1b96";
 	case "ve`":
-		return "\u1b97" + "\u1ba6";
+		return "\u1ba6" + "\u1b97";
 	case "be`":
-		return "\u1b98" + "\u1ba6";
+		return "\u1ba6" + "\u1b98";
 	case "me`":
-		return "\u1b99" + "\u1ba6";
+		return "\u1ba6" + "\u1b99";
 	case "ye`":
-		return "\u1b9a" + "\u1ba6";
+		return "\u1ba6" + "\u1b9a";
 	case "re`":
-		return "\u1b9b" + "\u1ba6";
+		return "\u1ba6" + "\u1b9b";
 	case "le`":
-		return "\u1b9c" + "\u1ba6";
+		return "\u1ba6" + "\u1b9c";
 	case "we`":
-		return "\u1b9d" + "\u1ba6";
+		return "\u1ba6" + "\u1b9d";
 	case "se`":
-		return "\u1b9e" + "\u1ba6";
+		return "\u1ba6" + "\u1b9e";
 	case "xe`":
-		return "\u1b9f" + "\u1ba6";
+		return "\u1ba6" + "\u1b9f";
 	case "he`":
-		return "\u1ba0" + "\u1ba6";
+		return "\u1ba6" + "\u1ba0";
 	case "nya":
 		return "\u1b91";
 	case "nyi":

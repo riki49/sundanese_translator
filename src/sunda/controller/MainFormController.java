@@ -126,13 +126,12 @@ public class MainFormController implements Initializable {
 			ChekHanacaraka chekHanacaraka = new ChekHanacaraka();
 			String stringLenght = inputTextArea.getText();
 			int isLenght = stringLenght.length();
-			int i = isLenght;
 			System.out.println("masuk kana case 0");
 			System.out.println("panjangna = " + isLenght);
 			System.out.println("mulai !!!\n");
 			sundaneseCharList.clear();
 
-			for (i = isLenght; i > 0; ) {
+			for (int i = isLenght; i > 0; ) {
 				int startString = 0;
 				System.out.println("masuk kana for");
 				System.out.println("i na = " + i);
@@ -146,15 +145,17 @@ public class MainFormController implements Initializable {
 				String getSinggleChar = null;
 
 				if (isLenght >= 4) {
-					int starLocal4 = startString;
+					int startLocal4 = startString;
 					int endLocal4 = startString + 4;
-					getFourChar = inputTextArea.getText(starLocal4, endLocal4)
+					System.out.println(inputTextArea.getText(startLocal4, endLocal4));
+					getFourChar = inputTextArea.getText(startLocal4, endLocal4)
 							.toLowerCase();
 					isFourChar = chekHanacaraka.isFourChar(getFourChar);
 				}
 				if (isLenght >= 3 && isFourChar == false) {
 					int startLocal3 = startString;
 					int endLocal3 = startString + 3;
+					System.out.println(inputTextArea.getText(startLocal3, endLocal3));
 					getThreeChar = inputTextArea.getText(startLocal3, endLocal3)
 							.toLowerCase();
 					isThreeChar = chekHanacaraka.isTripleChar(getThreeChar);
@@ -162,15 +163,17 @@ public class MainFormController implements Initializable {
 				if (isLenght >= 2 && isThreeChar == false && isFourChar == false) {
 					int startLocal2 = startString;
 					int endLocal2 = startString + 2;
+					System.out.println(inputTextArea.getText(startLocal2, endLocal2));
 					getTwoChar = inputTextArea.getText(startLocal2, endLocal2)
 							.toLowerCase();
 					isTwoChar = chekHanacaraka.isDoubleChar(getTwoChar);
 				}
 				if (isLenght >= 1 && isTwoChar == false && isThreeChar == false
 						&& isFourChar == false){
-					int starLocal1 = startString;
+					int startLocal1 = startString;
 					int endLocal1 = startString + 1;
-					getSinggleChar = inputTextArea.getText(starLocal1, endLocal1)
+					System.out.println(inputTextArea.getText(startLocal1, endLocal1));
+					getSinggleChar = inputTextArea.getText(startLocal1, endLocal1)
 							.toLowerCase();
 					chekHanacaraka.isSinggleChar(getSinggleChar);
 				}
@@ -207,12 +210,12 @@ public class MainFormController implements Initializable {
 				System.out.println("beres tina for");
 				System.out.println("hurufna = " + sundaneseCharList);
 				resultTranslate.setText(sundaneseCharList.toString());
-				translate = 0;
 				this.inputTextArea.setEditable(true);
 			}
 			/*
 			 * batas
 			 */
 		}
+		translate = 0;
 	}
 }
