@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sunda.controller.VirtualHanacarakaKeyBoardController">
+	<children>
+		<Button fx:id="zeroButton" layoutX="1130.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="0" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="oneButton" layoutX="119.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="1" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="twoButton" layoutX="233.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="2" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="threeButton" layoutX="347.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="3" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="fourButton" layoutX="461.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="4" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="fiveButton" layoutX="574.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="5" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="sixButton" layoutX="685.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="6" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="sevenButton" layoutX="796.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="7" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="eightButton" layoutX="907.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="8" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="nineButton" layoutX="1020.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="9" textFill="#e5a510">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="aButton" layoutX="119.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="a">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="iButton" layoutX="907.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="i">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="uButton" layoutX="796.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="u" textFill="#1e1e1e">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="oButton" layoutX="1020.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="o">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="éButton" layoutX="1130.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="é" textFill="#6a04f7">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="eButton" layoutX="347.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="e">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="euButton" layoutX="1243.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="eu" textFill="#f407f3">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="yaButton" layoutX="685.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="ya" textFill="#07deef">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="taButton" layoutX="574.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="ta">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="raButton" layoutX="461.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="ra" textFill="#0af53d">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="ngaButton" layoutX="1019.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="nga" textFill="#e13a93">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="qaButton" layoutX="119.0" layoutY="61.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="qa">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="paButton" layoutX="1131.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="pa">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="waButton" layoutX="233.0" layoutY="59.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="wa">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="laButton" layoutX="1020.0" layoutY="115.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="la" textFill="#f77305">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="kaButton" layoutX="907.0" layoutY="114.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="ka">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="jaButton" layoutX="796.0" layoutY="114.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="ja">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="haButton" layoutX="685.0" layoutY="115.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="ha" textFill="#f4df09">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="gaButton" layoutX="574.0" layoutY="115.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="ga">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="faButton" layoutX="461.0" layoutY="115.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="fa">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="daButton" layoutX="347.0" layoutY="115.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="da">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="saButton" layoutX="233.0" layoutY="115.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="sa">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="naButton" layoutX="795.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="na">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="baButton" layoutX="684.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="ba">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="vaButton" layoutX="573.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="va">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="caButton" layoutX="460.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="ca">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button layoutX="347.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="xa" fx:id="xaButton">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="zaButton" layoutX="233.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="za">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="nyaButton" layoutX="1130.0" layoutY="115.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="nya" textFill="#07deef">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="maButton" layoutX="906.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleCharButton" prefHeight="50.0" prefWidth="100.0" text="ma">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button layoutX="461.0" layoutY="227.0" mnemonicParsing="false" onAction="#spaceButton" prefHeight="50.0" prefWidth="434.0">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="panghuluButton" disable="false" layoutX="7.0" layoutY="116.0" mnemonicParsing="false" onAction="#handlePanghuluButton" prefHeight="50.0" prefWidth="100.0" text="panghulu">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="pamingkalButton" disable="false" layoutX="7.0" layoutY="171.0" mnemonicParsing="false" onAction="#handlePamingkalButton" prefHeight="50.0" prefWidth="100.0" text="pmingkal" textFill="#07deef">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="panyikuButton" disable="false" layoutX="7.0" layoutY="227.0" mnemonicParsing="false" onAction="#handlePanyikuButton" prefHeight="50.0" prefWidth="100.0" text="panyiku" textFill="#f77305">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="pamaehButton" disable="false" layoutX="8.0" layoutY="60.0" mnemonicParsing="false" onAction="#handlePamaehButton" prefHeight="50.0" prefWidth="100.0" text="pamaéh" textFill="#f50808">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="panolongButton" disable="false" layoutX="907.0" layoutY="227.0" mnemonicParsing="false" onAction="#handlePanolongButton" prefHeight="50.0" prefWidth="100.0" text="panolong">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="panyakraButton" disable="false" layoutX="118.0" layoutY="172.0" mnemonicParsing="false" onAction="#handlePanyakraButton" prefHeight="50.0" prefWidth="100.0" text="panyakra" textFill="#0af53d">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="paneuleungButton" disable="false" layoutX="1243.0" layoutY="227.0" mnemonicParsing="false" onAction="#handlePaneuleungButton" prefHeight="50.0" prefWidth="100.0" text="pneleung" textFill="#f407f3">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="panyukuButton" disable="false" layoutX="119.0" layoutY="227.0" mnemonicParsing="false" onAction="#handlePanyukuButton" prefHeight="50.0" prefWidth="100.0" text="panyuku" textFill="#1e1e1e">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="panelengButton" disable="false" layoutX="1130.0" layoutY="227.0" mnemonicParsing="false" onAction="#handlePanelengButton" prefHeight="50.0" prefWidth="100.0" text="panéléng" textFill="#6a04f7">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button disable="false" layoutX="1243.0" layoutY="114.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="50.0" prefWidth="100.0" text="pupus" textFill="#f50808">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="pamepetButton" disable="false" layoutX="347.0" layoutY="227.0" mnemonicParsing="false" onAction="#handlePamepetButton" prefHeight="50.0" prefWidth="100.0" text="pamepet">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="panyecekButton" disable="false" layoutX="1020.0" layoutY="227.0" mnemonicParsing="false" onAction="#handlePanyecekButton" prefHeight="50.0" prefWidth="100.0" text="panyecek" textFill="#e13a93">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="pangwisadButton" disable="false" layoutX="234.0" layoutY="226.0" mnemonicParsing="false" onAction="#handlePangwisadButton" prefHeight="50.0" prefWidth="100.0" text="pngwisad" textFill="#f4df09">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="submitButton" layoutX="1243.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleSubmitButton" prefHeight="102.0" prefWidth="100.0" text="atos" textFill="#037193f2">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+		<Button fx:id="panglayarButton" disable="false" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#handlePanglayarButton" prefHeight="50.0" prefWidth="100.0" text="pnglayar" textFill="#0af53d">
+			<font>
+				<Font name="Sundanese Unicode" size="18.0" />
+			</font>
+		</Button>
+	</children>
+</AnchorPane>

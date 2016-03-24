@@ -18,7 +18,7 @@ public class TranslatorFromLatinFont {
 			return "\u1b85";
 		case "o":
 			return "\u1b87";
-		case "é":
+		case "Ã©":
 			return "\u1b86";
 		case "e":
 			return "\u1b88";
@@ -104,7 +104,7 @@ public class TranslatorFromLatinFont {
 			return "\u1ba4";
 		case "panyuku":
 			return "\u1ba5";
-		case "panéléng":
+		case "panÃ©lÃ©ng":
 			return "\u1ba6";
 		case "panolong":
 			return "\u1ba7";
@@ -112,7 +112,7 @@ public class TranslatorFromLatinFont {
 			return "\u1ba8";
 		case "pneleung":
 			return "\u1ba9";
-		case "pamaéh":
+		case "pamaÃ©h":
 			return "\u1baa";
 		case "_ma":
 			return "\u1bac";

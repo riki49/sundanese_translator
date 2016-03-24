@@ -12,11 +12,11 @@
 	</columnConstraints>
 	<rowConstraints>
 		<RowConstraints maxHeight="192.0" minHeight="0.0" prefHeight="34.0" vgrow="SOMETIMES" />
-		<RowConstraints maxHeight="192.0" minHeight="7.0" prefHeight="22.0" vgrow="SOMETIMES" />
-		<RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="151.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="192.0" minHeight="7.0" prefHeight="40.0" vgrow="NEVER" />
+		<RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="137.0" vgrow="SOMETIMES" />
 		<RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
-		<RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="106.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
 	</rowConstraints>
 	<children>
 		<SplitPane dividerPositions="0.5016722408026756" prefHeight="144.0" prefWidth="600.0" GridPane.rowIndex="2">
@@ -54,7 +54,7 @@
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
                </columnConstraints>
                <rowConstraints>
-                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="NEVER" />
                </rowConstraints>
                <children>
             				<MenuBar prefHeight="20.0" prefWidth="600.0">
@@ -91,7 +91,7 @@
 						<Insets left="50.0" />
 					</GridPane.margin>
                <font>
-                  <Font size="18.0" />
+                  <Font size="35.0" />
                </font>
 				</Label>
 				<Label text="Kaluaran" textFill="#11ff00" GridPane.columnIndex="1">
@@ -99,7 +99,7 @@
 						<Insets left="50.0" />
 					</GridPane.margin>
                <font>
-                  <Font size="18.0" />
+                  <Font size="35.0" />
                </font>
 				</Label>
 			</children>
@@ -114,33 +114,36 @@
 			<children>
 				<GridPane>
 					<columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="81.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="317.0" minWidth="10.0" prefWidth="213.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="245.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="211.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="49.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="317.0" minWidth="10.0" prefWidth="150.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="317.0" minWidth="10.0" prefWidth="54.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="129.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="22.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="210.0" />
 					</columnConstraints>
 					<rowConstraints>
 						<RowConstraints fillHeight="false" minHeight="10.0" vgrow="SOMETIMES" />
 					</rowConstraints>
 					<children>
-								<Button mnemonicParsing="false" onAction="#translateButton" prefHeight="87.0" prefWidth="199.0" text="Tarjemahken" textFill="#350af7" GridPane.columnIndex="1">
-                     <font>
-                        <Font name="System Bold" size="22.0" />
-                     </font></Button>
-                  <Button mnemonicParsing="false" onAction="#handleLatinToNgalagena" prefHeight="25.0" prefWidth="296.0" text="Tina Laten" GridPane.columnIndex="2">
+                  <Button mnemonicParsing="false" onAction="#handleLatinToNgalagena" prefHeight="25.0" prefWidth="296.0" text="Tina Laten" GridPane.columnIndex="3">
                      <GridPane.margin>
                         <Insets bottom="50.0" />
                      </GridPane.margin>
                   </Button>
-            								<Button mnemonicParsing="false" onAction="#handleNgalagenaToLatin" prefHeight="25.0" prefWidth="295.0" text="tombol hanacaraka" GridPane.columnIndex="2">
+            								<Button mnemonicParsing="false" onAction="#handleHanacarakaKeyboard" prefHeight="25.0" prefWidth="295.0" text="tombol hanacaraka" GridPane.columnIndex="3">
                      <GridPane.margin>
                         <Insets top="50.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#handleNgalagenaKeyBoard" prefHeight="25.0" prefWidth="169.0" text="tombol Ngalagena" GridPane.columnIndex="3">
+                  <Button mnemonicParsing="false" onAction="#handleNgalagenaKeyBoard" prefHeight="25.0" prefWidth="169.0" text="tombol Ngalagena" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets top="50.0" />
                      </GridPane.margin>
+                  </Button>
+            								<Button mnemonicParsing="false" onAction="#translateButton" prefHeight="87.0" prefWidth="199.0" text="Tarjemahken" textFill="#350af7" GridPane.columnIndex="5">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
                   </Button>
 					</children>
 				</GridPane>
@@ -148,7 +151,7 @@
 		</GridPane>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
          <children>
-      		<Text fx:id="modeTranslatingText" fill="#f50505" layoutX="91.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tina laten" wrappingWidth="201.99999260902405" />
+      		<Text fx:id="modeTranslatingText" fill="#f50505" layoutX="91.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tina laten kana Sunda" wrappingWidth="201.99999260902405" />
             <Text layoutX="45.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mode :" />
          </children>
       </AnchorPane>

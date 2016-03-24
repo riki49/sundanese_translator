@@ -22,133 +22,46 @@ import sunda.util.TranslatorFromSundaneseFont;
 import sunda.util.TranslatorFromLatinFont;
 import javafx.fxml.FXML;
 
-public class VirtualKeyBoardController implements Initializable {
+public class VirtualHanacarakaKeyBoardController implements Initializable {
 
 	private TextArea inputTextArea;
 	private Stage stage;
 	private List<String> textToBeTranslatedList;
 	@FXML
-	Button pamingkalButton, panyikuButton, pamaehButton, panolongButton;
-	@FXML
-	Button panyakraButton;
-	@FXML
-	Button paneuleungButton;
-	@FXML
-	Button panyukuButton;
-	@FXML
-	Button panelengButton;
-	@FXML
-	Button pamepetButton;
-	@FXML
-	Button panyecekButton;
-	@FXML
-	Button pangwisadButton;
-	@FXML
 	Button submitButton;
 	@FXML
-	Button panglayarButton;
+	Button pamingkalButton, panyikuButton, pamaehButton, panolongButton,
+			panyakraButton, paneuleungButton, panyukuButton, panelengButton,
+			pamepetButton, panyecekButton, pangwisadButton, panglayarButton, panghuluButton;
 	@FXML
-	Button panghuluButton;
+	Button yaButton, taButton, raButton, ngaButton, qaButton, paButton, waButton,
+			laButton, kaButton, jaButton, haButton, gaButton, faButton, daButton,
+			saButton, naButton, baButton, vaButton, caButton, xaButton, zaButton,
+			nyaButton, maButton;
 	@FXML
-	Button yaButton;
+	Button spasiButton, aButton, iButton, éButton, eButton, euButton, uButton, oButton;
 	@FXML
-	Button taButton;
-	@FXML
-	Button raButton;
-	@FXML
-	Button ngaButton;
-	@FXML
-	Button qaButton;
-	@FXML
-	Button paButton;
-	@FXML
-	Button waButton;
-	@FXML
-	Button laButton;
-	@FXML
-	Button kaButton;
-	@FXML
-	Button jaButton;
-	@FXML
-	Button haButton;
-	@FXML
-	Button gaButton;
-	@FXML
-	Button faButton;
-	@FXML
-	Button daButton;
-	@FXML
-	Button saButton;
-	@FXML
-	Button naButton;
-	@FXML
-	Button baButton;
-	@FXML
-	Button vaButton;
-	@FXML
-	Button caButton;
-	@FXML
-	Button xaButton;
-	@FXML
-	Button zaButton;
-	@FXML
-	Button nyaButton;
-	@FXML
-	Button maButton;
-	@FXML
-	Button spasiButton;
-	@FXML
-	Button aButton;
-	@FXML
-	Button iButton;
-//	@FXML
-//	Button �Button;
-	@FXML
-	Button eButton;
-	@FXML
-	Button euButton;
-	@FXML
-	Button uButton;
-	@FXML
-	Button oButton;
-	@FXML
-	Button zeroButton;
-	@FXML
-	Button oneButton;
-	@FXML
-	Button twoButton;
-	@FXML
-	Button threeButton;
-	@FXML
-	Button fourButton;
-	@FXML
-	Button fiveButton;
-	@FXML
-	Button sixButton;
-	@FXML
-	Button sevenButton;
-	@FXML
-	Button eightButton;
-	@FXML
-	Button nineButton;
+	Button zeroButton, oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton,
+			sevenButton, eightButton, nineButton;
+
 	private List<Button> hanacarakaList;
-	private List<Button> metaCharacterList;
+	private List<Button> metaCharacter;
 	private List<Button> specialMetaCharacter;
 	private List<Button> vocalAndNumberCharacter;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 
-		this.metaCharacterList = Arrays.asList(this.pamaehButton, this.pamepetButton,
+		this.metaCharacter = Arrays.asList(this.pamaehButton, this.pamepetButton,
 				this.panelengButton, this.paneuleungButton, this.panghuluButton,
 				this.panolongButton, this.panyukuButton);
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
-				.setDisable(true));
+//		this.metaCharacter.forEach(metaCharacter -> metaCharacter
+//				.setDisable(true));
 		this.specialMetaCharacter = Arrays.asList(this.pamingkalButton,
 				this.panglayarButton, this.pangwisadButton, this.panyakraButton,
 				this.panyecekButton, this.panyikuButton);
-		this.specialMetaCharacter.forEach(metaCharacterList -> metaCharacterList
-				.setDisable(true));
+//		this.specialMetaCharacter.forEach(metaCharacterList -> metaCharacterList
+//				.setDisable(true));
 		this.hanacarakaList = Arrays.asList(this.baButton, this.caButton,
 				this.daButton, this.faButton, this.gaButton, this.haButton,
 				this.jaButton, this.kaButton, this.laButton, this.maButton,
@@ -158,19 +71,15 @@ public class VirtualKeyBoardController implements Initializable {
 				this.yaButton, this.zaButton);
 
 		this.vocalAndNumberCharacter = Arrays.asList(this.aButton, this.eButton, this.iButton,
-//				this.�Button, this.uButton, this.oButton, this.euButton, this.zeroButton,
+				this.éButton, this.uButton, this.oButton, this.euButton, this.zeroButton,
 				this.oneButton, this.twoButton, this.threeButton, this.fourButton, this.fiveButton,
 				this.sixButton, this.sevenButton, this.eightButton, this.nineButton);
-	}
-
-	public void vocalChar (ActionEvent actionEvent) {
-
 	}
 
 	public void spaceButton (ActionEvent actionEvent) {
 		this.textToBeTranslatedList.add(" ");
 		this.inputTextArea.appendText(" ");
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		this.specialMetaCharacter.forEach(specialMetaCharacter -> 
 		specialMetaCharacter.setDisable(true));
@@ -186,12 +95,12 @@ public class VirtualKeyBoardController implements Initializable {
 		if (isHanacaraka) {
 			this.specialMetaCharacter.forEach(specialMetaCharacter -> specialMetaCharacter
 					.setDisable(false));
-			this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+			this.metaCharacter.forEach(metaCharacter -> metaCharacter
 					.setDisable(false));
 		} else if (isVocalChar){
 			this.specialMetaCharacter.forEach(specialMetaCharacter -> specialMetaCharacter
 					.setDisable(true));
-			this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+			this.metaCharacter.forEach(metaCharacter -> metaCharacter
 					.setDisable(true));
 		}
 		/*
@@ -218,7 +127,7 @@ public class VirtualKeyBoardController implements Initializable {
 			this.stage = new Stage();
 			AnchorPane secondKeyboard = fxmlLoader
 					.load(ClassLoader
-							.getSystemResourceAsStream("sunda/view/VirtualSundaneseKeyBoard.fxml"));
+							.getSystemResourceAsStream("sunda/view/VirtualNgalagenaKeyBoard.fxml"));
 			Scene Scene = new Scene(secondKeyboard);
 			stage.initModality(Modality.APPLICATION_MODAL);
 			stage.initStyle(StageStyle.UNDECORATED);
@@ -263,7 +172,7 @@ public class VirtualKeyBoardController implements Initializable {
 	public void handlePamaehButton(ActionEvent actionEvent) {
 		this.specialMetaCharacter.forEach(specialMetaCharacter -> specialMetaCharacter
 				.setDisable(true));
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();
@@ -284,7 +193,7 @@ public class VirtualKeyBoardController implements Initializable {
 	}
 
 	public void handlePanghuluButton(ActionEvent actionEvent) {
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();
@@ -306,7 +215,7 @@ public class VirtualKeyBoardController implements Initializable {
 	}
 
 	public void handlePanyukuButton(ActionEvent actionEvent) {
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();
@@ -327,7 +236,7 @@ public class VirtualKeyBoardController implements Initializable {
 	}
 
 	public void handlePanelengButton(ActionEvent actionEvent) {
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
@@ -338,7 +247,7 @@ public class VirtualKeyBoardController implements Initializable {
 				lastIndexFromResul.length() - 1);
 		this.textToBeTranslatedList
 		.remove(this.textToBeTranslatedList.size() - 1);
-		this.textToBeTranslatedList.add(singleCharFromPamaeh + "�");
+		this.textToBeTranslatedList.add(singleCharFromPamaeh + "é");
 
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();
@@ -364,7 +273,7 @@ public class VirtualKeyBoardController implements Initializable {
 	}
 
 	public void handlePaneuleungButton(ActionEvent actionEvent) {
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();
@@ -385,7 +294,7 @@ public class VirtualKeyBoardController implements Initializable {
 	}
 
 	public void handlePanolongButton(ActionEvent actionEvent) {
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();
@@ -406,7 +315,7 @@ public class VirtualKeyBoardController implements Initializable {
 	}
 
 	public void handlePamepetButton(ActionEvent actionEvent) {
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();
@@ -428,7 +337,7 @@ public class VirtualKeyBoardController implements Initializable {
 	public void handlePamingkalButton(ActionEvent actionEvent) {
 		this.specialMetaCharacter.forEach(specialMetaCharacter -> specialMetaCharacter
 				.setDisable(true));
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();
@@ -452,7 +361,7 @@ public class VirtualKeyBoardController implements Initializable {
 	public void handlePanyakraButton(ActionEvent actionEvent) {
 		this.specialMetaCharacter.forEach(specialMetaCharacter -> specialMetaCharacter
 				.setDisable(true));
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();
@@ -477,7 +386,7 @@ public class VirtualKeyBoardController implements Initializable {
 	public void handlePanyikuButton(ActionEvent actionEvent) {
 		this.specialMetaCharacter.forEach(specialMetaCharacter -> specialMetaCharacter
 				.setDisable(true));
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();
@@ -502,7 +411,7 @@ public class VirtualKeyBoardController implements Initializable {
 	public void handlePangwisadButton(ActionEvent actionEvent) {
 		this.specialMetaCharacter.forEach(specialMetaCharacter -> specialMetaCharacter
 				.setDisable(true));
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();
@@ -515,7 +424,7 @@ public class VirtualKeyBoardController implements Initializable {
 	public void handlePanglayarButton(ActionEvent actionEvent) {
 		this.specialMetaCharacter.forEach(specialMetaCharacter -> specialMetaCharacter
 				.setDisable(true));
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();
@@ -528,7 +437,7 @@ public class VirtualKeyBoardController implements Initializable {
 	public void handlePanyecekButton(ActionEvent actionEvent) {
 		this.specialMetaCharacter.forEach(specialMetaCharacter -> specialMetaCharacter
 				.setDisable(true));
-		this.metaCharacterList.forEach(metaCharacter -> metaCharacter
+		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();

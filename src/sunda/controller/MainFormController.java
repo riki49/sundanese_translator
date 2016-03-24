@@ -2,6 +2,7 @@ package sunda.controller;
 
 import java.net.URL;
 
+import com.sun.org.apache.bcel.internal.util.ClassLoader;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.stage.Modality;
@@ -44,7 +45,6 @@ public class MainFormController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		this.textSundaneseToBeTranslatedList = new ArrayList<>();
 		this.sundaneseCharList = new ArrayList<>();
-//		inputTextArea.setOnMouseClicked(x->modeTranslatingText.setText("tina laten"));
 	}
 
 	@FXML
@@ -75,48 +75,75 @@ public class MainFormController implements Initializable {
 	}
 
 	@FXML
-	private void handleNgalagenaKeyBoard () {
-		this.modeTranslatingText.setText("tina Ngalagena");
-		FXMLLoader fxmlLoader = new FXMLLoader();
-		try {
-			AnchorPane root = (AnchorPane) fxmlLoader
-                    .load(ClassLoader
-                            .getSystemResourceAsStream("sunda/view/VirtualSundaneseKeyBoard.fxml"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	@FXML
-	public void handleNgalagenaToLatin() {
+	public void handleHanacarakaKeyboard() {
 		this.inputTextArea.setEditable(false);
 		try {
-			this.modeTranslatingText.setText("tina HANACARAKA kana Laten");
+			this.modeTranslatingText.setText("tina Ngalagena kana Laten");
 			translate = 1;
 			this.stage = new Stage();
 			FXMLLoader fxmlLoader = new FXMLLoader();
-
 			AnchorPane root = (AnchorPane) fxmlLoader
 					.load(ClassLoader
-							.getSystemResourceAsStream("sunda/view/VirtualKeyBoard.fxml"));
+							.getSystemResourceAsStream("sunda/view/VirtualHanacarakaKeyBoard.fxml"));
 
 			Scene scene = new Scene(root);
+			//palagi ngalengitken bingkai windows
 			stage.initModality(Modality.APPLICATION_MODAL);
-			stage.initStyle(StageStyle.UNDECORATED);
+			stage.initStyle(StageStyle.UNDECORATED);//tepi dieu
 			stage.setScene(scene);
 			stage.setResizable(false);
 			stage.setX(0);
 			stage.setY(430);
 
 			/*
-			 * nu hanap palagi passing referensi ke virtualkeyboard controller 
+			 * nu hanap palagi passing referensi ke virtualkeyboard controller
 			 */
-			VirtualKeyBoardController virtualKeyBoardController = (VirtualKeyBoardController) fxmlLoader
+			VirtualHanacarakaKeyBoardController virtualKeyBoardController = (VirtualHanacarakaKeyBoardController) fxmlLoader
 					.getController();
 			virtualKeyBoardController.setInputTextArea(this.inputTextArea);
 			//			virtualKeyBoardController.setTranslatingModeText(this.translatingMode.getText());
 			virtualKeyBoardController.setStage(stage);
 			virtualKeyBoardController
 			.setTextToBeTranslated(this.textSundaneseToBeTranslatedList);
+
+			this.resultTranslate.setText("");
+			stage.showAndWait();
+			stage.sizeToScene();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	@FXML
+	private void handleNgalagenaKeyBoard () {
+		this.inputTextArea.setEditable(false);
+		try {
+			this.modeTranslatingText.setText("tina ngalagena kana Laten");
+			translate = 1;
+			this.stage = new Stage();
+			FXMLLoader fxmlLoader = new FXMLLoader();
+			AnchorPane root = (AnchorPane) fxmlLoader
+					.load(ClassLoader
+							.getSystemResourceAsStream("sunda/view/VirtualNgalagenaKeyBoard.fxml"));
+
+			Scene scene = new Scene(root);
+			//palagi ngalengitken bingkai windows
+			stage.initModality(Modality.APPLICATION_MODAL);
+			stage.initStyle(StageStyle.UNDECORATED);//tepi dieu
+			stage.setScene(scene);
+			stage.setResizable(false);
+			stage.setX(0);
+			stage.setY(430);
+
+			/*
+			 * nu hanap palagi passing referensi ke virtualkeyboard controller
+			 */
+			VirtualHanacarakaKeyBoardController virtualKeyBoardController = (VirtualHanacarakaKeyBoardController) fxmlLoader
+					.getController();
+			virtualKeyBoardController.setInputTextArea(this.inputTextArea);
+			//			virtualKeyBoardController.setTranslatingModeText(this.translatingMode.getText());
+			virtualKeyBoardController.setStage(stage);
+			virtualKeyBoardController
+					.setTextToBeTranslated(this.textSundaneseToBeTranslatedList);
 
 			this.resultTranslate.setText("");
 			stage.showAndWait();
