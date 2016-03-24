@@ -114,21 +114,30 @@
 			<children>
 				<GridPane>
 					<columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="170.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="230.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="202.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="81.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="317.0" minWidth="10.0" prefWidth="213.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="245.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="306.0" minWidth="10.0" prefWidth="211.0" />
 					</columnConstraints>
 					<rowConstraints>
 						<RowConstraints fillHeight="false" minHeight="10.0" vgrow="SOMETIMES" />
 					</rowConstraints>
 					<children>
-								<Button mnemonicParsing="false" onAction="#translateButton" prefHeight="87.0" prefWidth="199.0" text="Tarjemahken" GridPane.columnIndex="1" />
+								<Button mnemonicParsing="false" onAction="#translateButton" prefHeight="87.0" prefWidth="199.0" text="Tarjemahken" textFill="#350af7" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font></Button>
                   <Button mnemonicParsing="false" onAction="#handleLatinToNgalagena" prefHeight="25.0" prefWidth="296.0" text="Tina Laten" GridPane.columnIndex="2">
                      <GridPane.margin>
                         <Insets bottom="50.0" />
                      </GridPane.margin>
                   </Button>
-            								<Button mnemonicParsing="false" onAction="#handleNgalagenaToLatin" prefHeight="25.0" prefWidth="295.0" text="Tina Sunda" GridPane.columnIndex="2">
+            								<Button mnemonicParsing="false" onAction="#handleNgalagenaToLatin" prefHeight="25.0" prefWidth="295.0" text="tombol hanacaraka" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets top="50.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleNgalagenaKeyBoard" prefHeight="25.0" prefWidth="169.0" text="tombol Ngalagena" GridPane.columnIndex="3">
                      <GridPane.margin>
                         <Insets top="50.0" />
                      </GridPane.margin>
@@ -139,7 +148,7 @@
 		</GridPane>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
          <children>
-      		<Text fx:id="modeTranslatingText" fill="#f50505" layoutX="95.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tina laten" wrappingWidth="63.99999260902405" />
+      		<Text fx:id="modeTranslatingText" fill="#f50505" layoutX="91.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tina laten" wrappingWidth="201.99999260902405" />
             <Text layoutX="45.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mode :" />
          </children>
       </AnchorPane>

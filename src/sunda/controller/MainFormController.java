@@ -70,14 +70,27 @@ public class MainFormController implements Initializable {
 	@FXML
 	private void handleLatinToNgalagena () {
 		this.inputTextArea.setText("");
-		this.modeTranslatingText.setText("tina laten");
+		this.modeTranslatingText.setText("tina laten kana Ngalagena");
 		this.inputTextArea.setEditable(true);
+	}
+
+	@FXML
+	private void handleNgalagenaKeyBoard () {
+		this.modeTranslatingText.setText("tina Ngalagena");
+		FXMLLoader fxmlLoader = new FXMLLoader();
+		try {
+			AnchorPane root = (AnchorPane) fxmlLoader
+                    .load(ClassLoader
+                            .getSystemResourceAsStream("sunda/view/VirtualSundaneseKeyBoard.fxml"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	@FXML
 	public void handleNgalagenaToLatin() {
 		this.inputTextArea.setEditable(false);
 		try {
-			this.modeTranslatingText.setText("tina sunda");
+			this.modeTranslatingText.setText("tina HANACARAKA kana Laten");
 			translate = 1;
 			this.stage = new Stage();
 			FXMLLoader fxmlLoader = new FXMLLoader();
