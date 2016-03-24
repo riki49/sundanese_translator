@@ -38,12 +38,13 @@ public class MainFormController implements Initializable {
 	 */
 
 	@FXML
-	private Text translatingMode;
+	private Text modeTranslatingText;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		this.textSundaneseToBeTranslatedList = new ArrayList<>();
 		this.sundaneseCharList = new ArrayList<>();
+//		inputTextArea.setOnMouseClicked(x->modeTranslatingText.setText("tina laten"));
 	}
 
 	@FXML
@@ -67,9 +68,16 @@ public class MainFormController implements Initializable {
 	}
 
 	@FXML
+	private void handleLatinToNgalagena () {
+		this.inputTextArea.setText("");
+		this.modeTranslatingText.setText("tina laten");
+		this.inputTextArea.setEditable(true);
+	}
+	@FXML
 	public void handleNgalagenaToLatin() {
+		this.inputTextArea.setEditable(false);
 		try {
-			//this.translatingMode.setText("tina sunda");
+			this.modeTranslatingText.setText("tina sunda");
 			translate = 1;
 			this.stage = new Stage();
 			FXMLLoader fxmlLoader = new FXMLLoader();
@@ -115,7 +123,6 @@ public class MainFormController implements Initializable {
 					.appendText(translatorFromSundaneseFont
 							.translate(string)));
 			textSundaneseToBeTranslatedList.clear();
-			inputTextArea.setEditable(true);
 			break;
 		case 0:
 			/*

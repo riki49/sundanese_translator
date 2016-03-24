@@ -28,13 +28,7 @@ public class VirtualKeyBoardController implements Initializable {
 	private Stage stage;
 	private List<String> textToBeTranslatedList;
 	@FXML
-	Button pamingkalButton;
-	@FXML
-	Button panyikuButton;
-	@FXML
-	Button pamaehButton;
-	@FXML
-	Button panolongButton;
+	Button pamingkalButton, panyikuButton, pamaehButton, panolongButton;
 	@FXML
 	Button panyakraButton;
 	@FXML
@@ -107,8 +101,8 @@ public class VirtualKeyBoardController implements Initializable {
 	Button aButton;
 	@FXML
 	Button iButton;
-	@FXML
-	Button éButton;
+//	@FXML
+//	Button ï¿½Button;
 	@FXML
 	Button eButton;
 	@FXML
@@ -164,7 +158,7 @@ public class VirtualKeyBoardController implements Initializable {
 				this.yaButton, this.zaButton);
 
 		this.vocalAndNumberCharacter = Arrays.asList(this.aButton, this.eButton, this.iButton,
-				this.éButton, this.uButton, this.oButton, this.euButton, this.zeroButton,
+//				this.ï¿½Button, this.uButton, this.oButton, this.euButton, this.zeroButton,
 				this.oneButton, this.twoButton, this.threeButton, this.fourButton, this.fiveButton,
 				this.sixButton, this.sevenButton, this.eightButton, this.nineButton);
 	}
@@ -344,7 +338,7 @@ public class VirtualKeyBoardController implements Initializable {
 				lastIndexFromResul.length() - 1);
 		this.textToBeTranslatedList
 		.remove(this.textToBeTranslatedList.size() - 1);
-		this.textToBeTranslatedList.add(singleCharFromPamaeh + "é");
+		this.textToBeTranslatedList.add(singleCharFromPamaeh + "ï¿½");
 
 		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
 		Button button = (Button) actionEvent.getSource();
