@@ -32,7 +32,7 @@ public class MainFormController implements Initializable {
 	public TextArea inputTextArea;
 	public TextArea resultTextArea;
 	private Stage stage;
-	private List<String> sundaneseCharList;
+//	private List<String> sundaneseCharList;
 	private List<String> textSundaneseToBeTranslatedList;
 	/*
 	 * struktur data untuk menyimpan string unicode per kata
@@ -44,7 +44,7 @@ public class MainFormController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		this.textSundaneseToBeTranslatedList = new ArrayList<>();
-		this.sundaneseCharList = new ArrayList<>();
+//		this.sundaneseCharList = new ArrayList<>();
 	}
 
 	@FXML
@@ -171,7 +171,8 @@ public class MainFormController implements Initializable {
 				System.out.println("panjangna = " + lenghtInputUser);
 				System.out.println("mulai !!!\n");
 				int startString = 0;
-				sundaneseCharList.clear();
+				String kumpulanString = "";
+//				sundaneseCharList.clear();
 				for (int i = lenghtInputUser; i > 0; ) {
 					System.out.println("masuk kana for");
 					System.out.println("i na = " + i);
@@ -194,13 +195,17 @@ public class MainFormController implements Initializable {
 						isFourChar = chekHanacaraka.isFourChar(getFourChar);
 						if (isFourChar != false) {
 							String returnFourChar = translatorFromInputUser.fourCharacter(getFourChar);
-							sundaneseCharList.add(returnFourChar);
+//							sundaneseCharList.add(returnFourChar);
 							startString += 4;
 							i -= 4;
 							System.out.println("asup kana 4");
 							System.out.println("i pulang dikurang " + i);
-							resultTextArea.appendText(sundaneseCharList.toString());
-							sundaneseCharList.clear();
+							//resultTextArea.appendText(sundaneseCharList.toString());
+							kumpulanString += returnFourChar;
+							resultTextArea.appendText(kumpulanString);
+							System.out.println("kumpulan string " + kumpulanString);
+							kumpulanString = "";
+//							sundaneseCharList.clear();
 						}
 						System.out.println("kaluar ti 4");
 					}
@@ -214,11 +219,14 @@ public class MainFormController implements Initializable {
 						isThreeChar = chekHanacaraka.isTripleChar(getThreeChar);
 						if (isThreeChar != false && isFourChar == false) {
 							String returnThreeChar = translatorFromInputUser.tripleChar(getThreeChar);
-							sundaneseCharList.add(returnThreeChar);
+//							sundaneseCharList.add(returnThreeChar);
 							startString += 3;
 							i = i - 3;
-							resultTextArea.appendText(sundaneseCharList.toString());
-							sundaneseCharList.clear();
+							//resultTextArea.appendText(sundaneseCharList.toString());
+							kumpulanString += returnThreeChar;
+							resultTextArea.appendText(kumpulanString);
+							kumpulanString = "";
+//							sundaneseCharList.clear();
 							System.out.println("asup kana 3");
 						}
 					}
@@ -230,17 +238,20 @@ public class MainFormController implements Initializable {
 						getTwoChar = inputTextArea.getText(startLocal2, endLocal2)
 								.toLowerCase();
 						isTwoChar = chekHanacaraka.isDoubleChar(getTwoChar);
-						if (isTwoChar == true) {
+						if (isTwoChar !=false && isThreeChar != true) {
 							String returnTwoChar = translatorFromInputUser.doubleCharacter(getTwoChar);
-							sundaneseCharList.add(returnTwoChar);
+//							sundaneseCharList.add(returnTwoChar);
 							startString = startString + 2;
 							i = i - 2;
-							resultTextArea.appendText(sundaneseCharList.toString());
-							sundaneseCharList.clear();
+//							resultTextArea.appendText(sundaneseCharList.toString());
+							kumpulanString += returnTwoChar;
+							resultTextArea.appendText(kumpulanString);
+							kumpulanString = "";
+//							sundaneseCharList.clear();
 							System.out.println("kaluar tina if 2");
 						}
 					}
-					if (i >= 1 && isTwoChar == false) {
+					if (i >= 1 && isTwoChar == false && isFourChar != true) {
 						System.out.println("asup kana if 1");
 						int startLocal1 = startString;
 						int endLocal1 = startString + 1;
@@ -250,23 +261,29 @@ public class MainFormController implements Initializable {
 						isSingleChar = chekHanacaraka.isSinggleChar(getSinggleChar);
 						if (isSingleChar != false && !getSinggleChar.equals(" ")) {
 							String returnSingleChar = translatorFromInputUser.singgleChar(getSinggleChar);
-							sundaneseCharList.add(returnSingleChar);
+//							sundaneseCharList.add(returnSingleChar);
 							startString +=1;
 							i -=1;
-							resultTextArea.appendText(sundaneseCharList.toString());
-							sundaneseCharList.clear();
+//							resultTextArea.appendText(sundaneseCharList.toString());
+							kumpulanString += returnSingleChar;
+							resultTextArea.appendText(kumpulanString);
+							kumpulanString = "";
+//							sundaneseCharList.clear();
+						} else if (getSinggleChar.equals(" ")){
+							resultTextArea.appendText("      ");
+							startString +=1;
+							i -=1;
 						} else {
-							resultTextArea.appendText(" ");
+							resultTextArea.appendText(getSinggleChar);
 							startString +=1;
 							i -=1;
 						}
 					}
 				}
 				System.out.println("beres ngacek");
-
 				System.out.println("beres tina for");
-				System.out.println("hurufna = " + sundaneseCharList);
-				sundaneseCharList.clear();
+//				System.out.println("hurufna = " + sundaneseCharList);
+//				sundaneseCharList.clear();
 				statusTranslate = 0;
 			/*
 			 * batas
