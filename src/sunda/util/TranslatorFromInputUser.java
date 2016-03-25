@@ -402,6 +402,231 @@ public class TranslatorFromInputUser {
 				return "\u1b91" + "\u1ba5";
 			case "nyo":
 				return "\u1b91" + "\u1ba7";
+					/*
+		 * a
+		 */
+			case "kla":
+				return "\u1b8a\u1ba3";
+			case "qla":
+				return "\u1b8b\u1ba3";
+			case "gla":
+				return "\u1b8c\u1ba3";
+			case "cla":
+				return "\u1b8eᮣ";
+			case "jla":
+				return "\u1b8fᮣ";
+			case "zla":
+				return "\u1b90ᮣ";
+			case "tla":
+				return "\u1b92ᮣ";
+			case "dla":
+				return "\u1b93ᮣ";
+			case "nla":
+				return "\u1b94ᮣ";
+			case "pla":
+				return "\u1b95ᮣ";
+			case "fla":
+				return "\u1b96ᮣ";
+			case "vla":
+				return "\u1b97ᮣ";
+			case "bla":
+				return "\u1b98ᮣ";
+			case "mla":
+				return "\u1b99ᮣ";
+			case "yla":
+				return "\u1b9aᮣ";
+			case "rla":
+				return "\u1b9bᮣ";
+			case "lla":
+				return "\u1b9cᮣ";
+			case "wla":
+				return "\u1b9dᮣ";
+			case "sla":
+				return "\u1b9eᮣ";
+			case "xla":
+				return "\u1b9fᮣ";
+			case "hla":
+				return "\u1ba0ᮣ";
+			/*
+			 * i
+			 */
+			case "kli":
+				return "\u1b8aᮣ" + "\u1ba4";
+			case "qli":
+				return "\u1b8bᮣ" + "\u1ba4";
+			case "gli":
+				return "\u1b8cᮣ" + "\u1ba4";
+			case "cli":
+				return "\u1b8eᮣ" + "\u1ba4";
+			case "jli":
+				return "\u1b8fᮣ" + "\u1ba4";
+			case "zli":
+				return "\u1b90ᮣ" + "\u1ba4";
+			case "tli":
+				return "\u1b92ᮣ" + "\u1ba4";
+			case "dli":
+				return "\u1b93ᮣ" + "\u1ba4";
+			case "nli":
+				return "\u1b94ᮣ" + "\u1ba4";
+			case "pli":
+				return "\u1b95ᮣ" + "\u1ba4";
+			case "fli":
+				return "\u1b96ᮣ" + "\u1ba4";
+			case "vli":
+				return "\u1b97ᮣ" + "\u1ba4";
+			case "bli":
+				return "\u1b98ᮣ" + "\u1ba4";
+			case "mli":
+				return "\u1b99ᮣ" + "\u1ba4";
+			case "yli":
+				return "\u1b9aᮣ" + "\u1ba4";
+			case "rli":
+				return "\u1b9bᮣ" + "\u1ba4";
+			case "lli":
+				return "\u1b9cᮣ" + "\u1ba4";
+			case "wli":
+				return "\u1b9dᮣ" + "\u1ba4";
+			case "sli":
+				return "\u1b9eᮣ" + "\u1ba4";
+			case "xli":
+				return "\u1b9fᮣ" + "\u1ba4";
+			case "hli":
+				return "\u1ba0ᮣ" + "\u1ba4";
+			/*
+			 * o
+			 */
+			case "wlo":
+				return "\u1b9dᮣ" + "\u1ba7";
+			case "slo":
+				return "\u1b9eᮣ" + "\u1ba7";
+			case "xlo":
+				return "\u1b9fᮣ" + "\u1ba7";
+			case "hlo":
+				return "\u1ba0ᮣ" + "\u1ba7";
+			case "llo":
+				return "\u1b9cᮣ" + "\u1ba7";
+			case "rlo":
+				return "\u1b9bᮣ" + "\u1ba7";
+			case "klo":
+				return "\u1b8aᮣ" + "\u1ba7";
+			case "qlo":
+				return "\u1b8bᮣ" + "\u1ba7";
+			case "glo":
+				return "\u1b8cᮣ" + "\u1ba7";
+			case "clo" :
+				return "\u1b8eᮣ" + "\u1ba7";
+			case "jlo":
+				return "\u1b8fᮣ" + "\u1ba7";
+			case "zlo":
+				return "\u1b90ᮣ" + "\u1ba7";
+			case "tlo":
+				return "\u1b92ᮣ" + "\u1ba7";
+			case "dlo":
+				return "\u1b93ᮣ" + "\u1ba7";
+			case "nlo":
+				return "\u1b94ᮣ" + "\u1ba7";
+			case "plo":
+				return "\u1b95ᮣ" + "\u1ba7";
+			case "flo":
+				return "\u1b96ᮣ" + "\u1ba7";
+			case "vlo":
+				return "\u1b97ᮣ" + "\u1ba7";
+			case "blo":
+				return "\u1b98ᮣ" + "\u1ba7";
+			case "mlo":
+				return "\u1b99ᮣ" + "\u1ba7";
+			case "ylo":
+				return "\u1b9aᮣ" + "\u1ba7";
+			/*
+			 * u
+			 */
+			case "klu":
+				return "\u1b8aᮣ" + "\u1ba5";
+			case "qlu":
+				return "\u1b8bᮣ" + "\u1ba5";
+			case "glu":
+				return "\u1b8cᮣ" + "\u1ba5";
+			case "clu":
+				return "\u1b8eᮣ" + "\u1ba5";
+			case "jlu":
+				return "\u1b8fᮣ" + "\u1ba5";
+			case "zlu":
+				return "\u1b90ᮣ" + "\u1ba5";
+			case "tlu":
+				return "\u1b92ᮣ" + "\u1ba5";
+			case "dlu":
+				return "\u1b93ᮣ" + "\u1ba5";
+			case "nlu":
+				return "\u1b94ᮣ" + "\u1ba5";
+			case "plu":
+				return "\u1b95ᮣ" + "\u1ba5";
+			case "flu":
+				return "\u1b96ᮣ" + "\u1ba5";
+			case "vlu":
+				return "\u1b97ᮣ" + "\u1ba5";
+			case "blu":
+				return "\u1b98ᮣ" + "\u1ba5";
+			case "mlu":
+				return "\u1b99ᮣ" + "\u1ba5";
+			case "ylu":
+				return "\u1b9aᮣ" + "\u1ba5";
+			case "rlu":
+				return "\u1b9bᮣ" + "\u1ba5";
+			case "llu":
+				return "\u1b9cᮣ" + "\u1ba5";
+			case "wlu":
+				return "\u1b9dᮣ" + "\u1ba5";
+			case "slu":
+				return "\u1b9eᮣ" + "\u1ba5";
+			case "xlu":
+				return "\u1b9fᮣ" + "\u1ba5";
+			case "hlu":
+				return "\u1ba0ᮣ" + "\u1ba5";
+
+			/*
+			 * e
+			 */
+			case "kle":
+				return "\u1b8aᮣ" + "\u1ba8";
+			case "qle":
+				return "\u1b8bᮣ" + "\u1ba8";
+			case "cle":
+				return "\u1b8eᮣ" + "\u1ba8";
+			case "jle":
+				return "\u1b8fᮣ" + "\u1ba8";
+			case "zle":
+				return "\u1b90ᮣ" + "\u1ba8";
+			case "tle":
+				return "\u1b92ᮣ" + "\u1ba8";
+			case "dle":
+				return "\u1b93ᮣ" + "\u1ba8";
+			case "nle":
+				return "\u1b94ᮣ" + "\u1ba8";
+			case "ple":
+				return "\u1b95ᮣ" + "\u1ba8";
+			case "fle":
+				return "\u1b96ᮣ" + "\u1ba8";
+			case "vle":
+				return "\u1b97ᮣ" + "\u1ba8";
+			case "ble":
+				return "\u1b98ᮣ" + "\u1ba8";
+			case "mle":
+				return "\u1b99ᮣ" + "\u1ba8";
+			case "yle":
+				return "\u1b9aᮣ" + "\u1ba8";
+			case "rle":
+				return "\u1b9bᮣ" + "\u1ba8";
+			case "lle":
+				return "\u1b9cᮣ" + "\u1ba8";
+			case "wle":
+				return "\u1b9dᮣ" + "\u1ba8";
+			case "sle":
+				return "\u1b9eᮣ" + "\u1ba8";
+			case "xle":
+				return "\u1b9fᮣ" + "\u1ba8";
+			case "hle":
+				return "\u1ba0ᮣ" + "\u1ba8";
+
 		}
 		return tripleChar;
 	}

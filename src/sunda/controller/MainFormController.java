@@ -251,7 +251,7 @@ public class MainFormController implements Initializable {
 							System.out.println("kaluar tina if 2");
 						}
 					}
-					if (i >= 1 && isTwoChar == false && isFourChar != true) {
+					if (i >= 1 && isTwoChar == false && isThreeChar!= true && isFourChar != true) {
 						System.out.println("asup kana if 1");
 						int startLocal1 = startString;
 						int endLocal1 = startString + 1;
@@ -270,7 +270,7 @@ public class MainFormController implements Initializable {
 							kumpulanString = "";
 //							sundaneseCharList.clear();
 						} else if (getSinggleChar.equals(" ")){
-							resultTextArea.appendText("      ");
+							resultTextArea.appendText("  ");
 							startString +=1;
 							i -=1;
 						} else {
