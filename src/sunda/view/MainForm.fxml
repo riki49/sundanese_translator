@@ -32,7 +32,7 @@
 				</AnchorPane>
 				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="327.0" prefWidth="291.0">
 					<children>
-						<TextArea fx:id="resultTranslate" editable="false" layoutX="48.0" layoutY="77.0" prefHeight="229.0" prefWidth="295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+						<TextArea fx:id="resultTextArea" editable="false" layoutX="48.0" layoutY="77.0" prefHeight="229.0" prefWidth="295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 							<font>
 								<Font name="Sundanese Unicode" size="41.0" />
 							</font>
@@ -151,8 +151,13 @@
 		</GridPane>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
          <children>
-      		<Text fx:id="modeTranslatingText" fill="#f50505" layoutX="91.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tina laten kana Sunda" wrappingWidth="201.99999260902405" />
+      		<Text fx:id="modeTranslatingText" fill="#f50505" layoutX="91.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tina laten kana Ngalagena" wrappingWidth="201.99999260902405" />
             <Text layoutX="45.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mode :" />
+            <Label layoutX="234.0" layoutY="-1.0" text="&lt;==" textFill="#f7ff04">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
 	</children>

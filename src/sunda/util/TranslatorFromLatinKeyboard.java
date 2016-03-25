@@ -1,6 +1,6 @@
 package sunda.util;
 
-public class TranslatorFromLatinFont {
+public class TranslatorFromLatinKeyboard {
 
 	public String translate(String latinFont) {
 		switch (latinFont.toLowerCase()) {

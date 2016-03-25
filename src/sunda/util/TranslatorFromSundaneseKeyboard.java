@@ -1,6 +1,6 @@
 package sunda.util;
 
-public class TranslatorFromSundaneseFont {
+public class TranslatorFromSundaneseKeyboard {
 	public String translate(String ngalagena) {
 		switch (ngalagena.toLowerCase()) {
 		case "\u1b83":
@@ -10,7 +10,7 @@ public class TranslatorFromSundaneseFont {
 		case "\u1b85":
 			return "u";
 		case "\u1b86":
-			return "é";
+			return "Ã©";
 		case "\u1b87":
 			return "o";
 		case "\u1b88":

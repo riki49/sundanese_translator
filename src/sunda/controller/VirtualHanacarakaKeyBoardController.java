@@ -18,8 +18,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
-import sunda.util.TranslatorFromSundaneseFont;
-import sunda.util.TranslatorFromLatinFont;
+import sunda.util.TranslatorFromSundaneseKeyboard;
+import sunda.util.TranslatorFromLatinKeyboard;
 import javafx.fxml.FXML;
 
 public class VirtualHanacarakaKeyBoardController implements Initializable {
@@ -106,9 +106,9 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 		/*
 		 * simpan setiap click Sundanese character ke dalam list
 		 */
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		this.textToBeTranslatedList.add(sundaneseCharacter);
 		this.inputTextArea.appendText(sundaneseCharacter);
@@ -174,16 +174,16 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 				.setDisable(true));
 		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		this.inputTextArea.appendText(sundaneseCharacter);
-		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
+		TranslatorFromSundaneseKeyboard translatorFromSundaneseKeyboard = new TranslatorFromSundaneseKeyboard();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
 		// terakhir
-		String lastIndexFromResul = translatorFromSundaneseFont
+		String lastIndexFromResul = translatorFromSundaneseKeyboard
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
@@ -195,16 +195,16 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 	public void handlePanghuluButton(ActionEvent actionEvent) {
 		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		this.inputTextArea.appendText(sundaneseCharacter);
-		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
+		TranslatorFromSundaneseKeyboard translatorFromSundaneseKeyboard = new TranslatorFromSundaneseKeyboard();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
 		// terakhir
-		String lastIndexFromResul = translatorFromSundaneseFont
+		String lastIndexFromResul = translatorFromSundaneseKeyboard
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
@@ -217,16 +217,16 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 	public void handlePanyukuButton(ActionEvent actionEvent) {
 		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		this.inputTextArea.appendText(sundaneseCharacter);
-		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
+		TranslatorFromSundaneseKeyboard translatorFromSundaneseKeyboard = new TranslatorFromSundaneseKeyboard();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
 		// terakhir
-		String lastIndexFromResul = translatorFromSundaneseFont
+		String lastIndexFromResul = translatorFromSundaneseKeyboard
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
@@ -238,10 +238,10 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 	public void handlePanelengButton(ActionEvent actionEvent) {
 		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
-		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
+		TranslatorFromSundaneseKeyboard translatorFromSundaneseKeyboard = new TranslatorFromSundaneseKeyboard();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1);
-		String lastIndexFromResul = translatorFromSundaneseFont
+		String lastIndexFromResul = translatorFromSundaneseKeyboard
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
@@ -249,9 +249,9 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 		.remove(this.textToBeTranslatedList.size() - 1);
 		this.textToBeTranslatedList.add(singleCharFromPamaeh + "é");
 
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		String captureStringFromTextArea = inputTextArea.getText();
 		String potonganDariCaptureString;
@@ -275,16 +275,16 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 	public void handlePaneuleungButton(ActionEvent actionEvent) {
 		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		this.inputTextArea.appendText(sundaneseCharacter);
-		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
+		TranslatorFromSundaneseKeyboard translatorFromSundaneseKeyboard = new TranslatorFromSundaneseKeyboard();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
 		// terakhir
-		String lastIndexFromResul = translatorFromSundaneseFont
+		String lastIndexFromResul = translatorFromSundaneseKeyboard
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
@@ -296,16 +296,16 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 	public void handlePanolongButton(ActionEvent actionEvent) {
 		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		this.inputTextArea.appendText(sundaneseCharacter);
-		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
+		TranslatorFromSundaneseKeyboard translatorFromSundaneseKeyboard = new TranslatorFromSundaneseKeyboard();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
 		// terakhir
-		String lastIndexFromResul = translatorFromSundaneseFont
+		String lastIndexFromResul = translatorFromSundaneseKeyboard
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
@@ -317,15 +317,15 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 	public void handlePamepetButton(ActionEvent actionEvent) {
 		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		this.inputTextArea.appendText(sundaneseCharacter);
-		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
+		TranslatorFromSundaneseKeyboard translatorFromSundaneseKeyboard = new TranslatorFromSundaneseKeyboard();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1);
-		String lastIndexFromResul = translatorFromSundaneseFont
+		String lastIndexFromResul = translatorFromSundaneseKeyboard
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
@@ -339,15 +339,15 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 				.setDisable(true));
 		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		this.inputTextArea.appendText(sundaneseCharacter);
-		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
+		TranslatorFromSundaneseKeyboard translatorFromSundaneseKeyboard = new TranslatorFromSundaneseKeyboard();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1);
-		String lastIndexFromResul = translatorFromSundaneseFont
+		String lastIndexFromResul = translatorFromSundaneseKeyboard
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
@@ -363,16 +363,16 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 				.setDisable(true));
 		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		this.inputTextArea.appendText(sundaneseCharacter);
-		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
+		TranslatorFromSundaneseKeyboard translatorFromSundaneseKeyboard = new TranslatorFromSundaneseKeyboard();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
 		// terakhir
-		String lastIndexFromResul = translatorFromSundaneseFont
+		String lastIndexFromResul = translatorFromSundaneseKeyboard
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
@@ -388,16 +388,16 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 				.setDisable(true));
 		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		this.inputTextArea.appendText(sundaneseCharacter);
-		TranslatorFromSundaneseFont translatorFromSundaneseFont = new TranslatorFromSundaneseFont();
+		TranslatorFromSundaneseKeyboard translatorFromSundaneseKeyboard = new TranslatorFromSundaneseKeyboard();
 		String lastIndexOfArraySundaneseCharacter = this.textToBeTranslatedList
 				.get(this.textToBeTranslatedList.size() - 1); // dapatkan index
 		// terakhir
-		String lastIndexFromResul = translatorFromSundaneseFont
+		String lastIndexFromResul = translatorFromSundaneseKeyboard
 				.translate(lastIndexOfArraySundaneseCharacter);
 		String singleCharFromPamaeh = lastIndexFromResul.substring(0,
 				lastIndexFromResul.length() - 1);
@@ -413,9 +413,9 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 				.setDisable(true));
 		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		this.inputTextArea.appendText(sundaneseCharacter);
 		this.textToBeTranslatedList.add("h");
@@ -426,9 +426,9 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 				.setDisable(true));
 		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		this.inputTextArea.appendText(sundaneseCharacter);
 		this.textToBeTranslatedList.add("r");
@@ -439,9 +439,9 @@ public class VirtualHanacarakaKeyBoardController implements Initializable {
 				.setDisable(true));
 		this.metaCharacter.forEach(metaCharacter -> metaCharacter
 				.setDisable(true));
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		Button button = (Button) actionEvent.getSource();
-		String sundaneseCharacter = translatorFromLatinFont.translate(button
+		String sundaneseCharacter = translatorFromLatinKeyboard.translate(button
 				.getText());
 		this.inputTextArea.appendText(sundaneseCharacter);
 		this.textToBeTranslatedList.add("ng");

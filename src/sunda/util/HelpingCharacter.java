@@ -26,9 +26,9 @@ public class HelpingCharacter {
 
 	@FXML
 	public void helpingButton(ActionEvent actionEvent) {
-		TranslatorFromLatinFont translatorFromLatinFont = new TranslatorFromLatinFont();
+		TranslatorFromLatinKeyboard translatorFromLatinKeyboard = new TranslatorFromLatinKeyboard();
 		String latinCharacter = ((Button) actionEvent.getSource()).getText();
-		translatorFromLatinFont.translate(latinCharacter);
+		translatorFromLatinKeyboard.translate(latinCharacter);
 		if (!this.pamaeh.isDisable()) {
 			this.pamaeh.setDisable(false);
 			String lastLatinCharacter = (String) this.latinCharacterList
@@ -36,7 +36,7 @@ public class HelpingCharacter {
 			String newLatinCharacter = lastLatinCharacter.substring(0,
 					lastLatinCharacter.length() - 1);
 			this.sundaneseCharacterList
-			.add(translatorFromLatinFont.translate(newLatinCharacter));
+			.add(translatorFromLatinKeyboard.translate(newLatinCharacter));
 			this.inputTextArea.appendText(this.sundaneseCharacterList
 					.get(this.sundaneseCharacterList.size() - 1));
 			this.latinCharacterList.remove(this.latinCharacterList.size() - 1);
