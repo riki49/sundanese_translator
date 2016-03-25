@@ -28,7 +28,7 @@ import javafx.scene.text.Text;
 
 public class MainFormController implements Initializable {
 	@FXML
-	private int translate = 0;
+	private int statusTranslate = 0;
 	public TextArea inputTextArea;
 	public TextArea resultTextArea;
 	private Stage stage;
@@ -73,7 +73,7 @@ public class MainFormController implements Initializable {
 		this.resultTextArea.setText("");
 		this.modeTranslatingText.setText("tina laten kana Ngalagena");
 		this.inputTextArea.setEditable(true);
-		translate = 0;
+		statusTranslate = 0;
 	}
 
 	@FXML
@@ -81,7 +81,7 @@ public class MainFormController implements Initializable {
 		this.inputTextArea.setEditable(false);
 		try {
 			this.modeTranslatingText.setText("tina Ngalagena kana Laten");
-			translate = 1;
+			statusTranslate = 1;
 			this.stage = new Stage();
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			AnchorPane root = (AnchorPane) fxmlLoader
@@ -106,7 +106,7 @@ public class MainFormController implements Initializable {
 			//			virtualKeyBoardController.setTranslatingModeText(this.translatingMode.getText());
 			virtualKeyBoardController.setStage(stage);
 			virtualKeyBoardController
-			.setTextToBeTranslated(this.textSundaneseToBeTranslatedList);
+					.setTextToBeTranslated(this.textSundaneseToBeTranslatedList);
 
 			this.resultTextArea.setText("");
 			stage.showAndWait();
@@ -120,7 +120,7 @@ public class MainFormController implements Initializable {
 		this.inputTextArea.setEditable(false);
 		try {
 			this.modeTranslatingText.setText("tina ngalagena kana Laten");
-			translate = 1;
+			statusTranslate = 1;
 			this.stage = new Stage();
 			FXMLLoader fxmlLoader = new FXMLLoader();
 			AnchorPane root = (AnchorPane) fxmlLoader
@@ -157,23 +157,22 @@ public class MainFormController implements Initializable {
 
 	@FXML
 	public void translateButton() {
-		switch (translate) {
+		switch (statusTranslate) {
 			case 0:
 			/*
 			 * deklarasi
 			 */
-
+				inputTextArea.setEditable(false);
 				TranslatorFromInputUser translatorFromInputUser = new TranslatorFromInputUser();
 				ChekHanacaraka chekHanacaraka = new ChekHanacaraka();
 				String stringLenght = inputTextArea.getText();
-				int isLenght = stringLenght.length();
+				int lenghtInputUser = stringLenght.length();
 				System.out.println("masuk kana case 0");
-				System.out.println("panjangna = " + isLenght);
+				System.out.println("panjangna = " + lenghtInputUser);
 				System.out.println("mulai !!!\n");
+				int startString = 0;
 				sundaneseCharList.clear();
-
-				for (int i = isLenght; i > 0; ) {
-					int startString = 0;
+				for (int i = lenghtInputUser; i > 0; ) {
 					System.out.println("masuk kana for");
 					System.out.println("i na = " + i);
 
@@ -183,79 +182,96 @@ public class MainFormController implements Initializable {
 					String getThreeChar = null;
 					boolean isTwoChar = false;
 					String getTwoChar = null;
+					boolean isSingleChar = false;
 					String getSinggleChar = null;
 
-					if (isLenght >= 4) {
+					if (i >= 4) {
 						int startLocal4 = startString;
 						int endLocal4 = startString + 4;
 						System.out.println(inputTextArea.getText(startLocal4, endLocal4));
 						getFourChar = inputTextArea.getText(startLocal4, endLocal4)
 								.toLowerCase();
 						isFourChar = chekHanacaraka.isFourChar(getFourChar);
+						if (isFourChar != false) {
+							String returnFourChar = translatorFromInputUser.fourCharacter(getFourChar);
+							sundaneseCharList.add(returnFourChar);
+							startString += 4;
+							i -= 4;
+							System.out.println("asup kana 4");
+							System.out.println("i pulang dikurang " + i);
+							resultTextArea.appendText(sundaneseCharList.toString());
+							sundaneseCharList.clear();
+						}
+						System.out.println("kaluar ti 4");
 					}
-					if (isLenght >= 3 && isFourChar == false) {
+					if (i >= 3) {
+						System.out.println("asup if 3");
 						int startLocal3 = startString;
 						int endLocal3 = startString + 3;
 						System.out.println(inputTextArea.getText(startLocal3, endLocal3));
 						getThreeChar = inputTextArea.getText(startLocal3, endLocal3)
 								.toLowerCase();
 						isThreeChar = chekHanacaraka.isTripleChar(getThreeChar);
+						if (isThreeChar != false && isFourChar == false) {
+							String returnThreeChar = translatorFromInputUser.tripleChar(getThreeChar);
+							sundaneseCharList.add(returnThreeChar);
+							startString += 3;
+							i = i - 3;
+							resultTextArea.appendText(sundaneseCharList.toString());
+							sundaneseCharList.clear();
+							System.out.println("asup kana 3");
+						}
 					}
-					if (isLenght >= 2 && isThreeChar == false && isFourChar == false) {
+					if (i >= 2) {
+						System.out.println("asup kana if 2");
 						int startLocal2 = startString;
 						int endLocal2 = startString + 2;
 						System.out.println(inputTextArea.getText(startLocal2, endLocal2));
 						getTwoChar = inputTextArea.getText(startLocal2, endLocal2)
 								.toLowerCase();
 						isTwoChar = chekHanacaraka.isDoubleChar(getTwoChar);
+						if (isTwoChar == true) {
+							String returnTwoChar = translatorFromInputUser.doubleCharacter(getTwoChar);
+							sundaneseCharList.add(returnTwoChar);
+							startString = startString + 2;
+							i = i - 2;
+							resultTextArea.appendText(sundaneseCharList.toString());
+							sundaneseCharList.clear();
+							System.out.println("kaluar tina if 2");
+						}
 					}
-					if (isLenght >= 1 && isTwoChar == false && isThreeChar == false
-							&& isFourChar == false) {
+					if (i >= 1 && isTwoChar == false) {
+						System.out.println("asup kana if 1");
 						int startLocal1 = startString;
 						int endLocal1 = startString + 1;
 						System.out.println(inputTextArea.getText(startLocal1, endLocal1));
 						getSinggleChar = inputTextArea.getText(startLocal1, endLocal1)
 								.toLowerCase();
-						chekHanacaraka.isSinggleChar(getSinggleChar);
+						isSingleChar = chekHanacaraka.isSinggleChar(getSinggleChar);
+						if (isSingleChar != false && !getSinggleChar.equals(" ")) {
+							String returnSingleChar = translatorFromInputUser.singgleChar(getSinggleChar);
+							sundaneseCharList.add(returnSingleChar);
+							startString +=1;
+							i -=1;
+							resultTextArea.appendText(sundaneseCharList.toString());
+							sundaneseCharList.clear();
+						} else {
+							resultTextArea.appendText(" ");
+							startString +=1;
+							i -=1;
+						}
 					}
-					System.out.println("beres ngacek");
-
-					if (isFourChar == true) {
-						String returnFourChar = translatorFromInputUser.fourCharacter(getFourChar);
-						sundaneseCharList.add(returnFourChar);
-						startString = startString + 4;
-						i = i - 4;
-						System.out.println("asup kana 4");
-						System.out.println("i pulang dikurang " + i);
-					} else if (isThreeChar == true) {
-						String returnThreeChar = translatorFromInputUser.tripleChar(getThreeChar);
-						sundaneseCharList.add(returnThreeChar);
-						startString = startString + 3;
-						i = i - 3;
-						System.out.println("asup kana 3");
-					} else if (isTwoChar == true) {
-						String returnTwoChar = translatorFromInputUser.doubleCharacter(getTwoChar);
-						sundaneseCharList.add(returnTwoChar);
-						startString = startString + 2;
-						i = i - 2;
-						System.out.println("asup kana 2");
-					} else {
-						String returnSinggleChar = translatorFromInputUser
-								.singgleChar(getSinggleChar);
-						sundaneseCharList.add(returnSinggleChar);
-						i = i - 1;
-						System.out.println("asup kana 1");
-					}
-
-
-					System.out.println("beres tina for");
-					System.out.println("hurufna = " + sundaneseCharList);
-					resultTextArea.setText(sundaneseCharList.toString());
-					this.inputTextArea.setEditable(true);
 				}
+				System.out.println("beres ngacek");
+
+				System.out.println("beres tina for");
+				System.out.println("hurufna = " + sundaneseCharList);
+				sundaneseCharList.clear();
+				statusTranslate = 0;
 			/*
 			 * batas
 			 */
+
 			case 1:
 				TranslatorFromSundaneseKeyboard translatorFromSundaneseKeyboard = new TranslatorFromSundaneseKeyboard();
 				textSundaneseToBeTranslatedList
@@ -263,7 +279,7 @@ public class MainFormController implements Initializable {
 								.appendText(translatorFromSundaneseKeyboard
 										.translate(string)));
 				textSundaneseToBeTranslatedList.clear();
-				translate = 1;
+				statusTranslate = 1;
 				break;
 		}
 	}
