@@ -259,6 +259,14 @@ public class MainFormController implements Initializable {
 						getSinggleChar = inputTextArea.getText(startLocal1, endLocal1)
 								.toLowerCase();
 						isSingleChar = chekHanacaraka.isSinggleChar(getSinggleChar);
+						String searchLastIndexInScreen = inputTextArea.getText();
+						char last = searchLastIndexInScreen.charAt(startLocal1 - 1);
+						System.out.println("new " + last);
+						if (getSinggleChar.equals("h") && lenghtInputUser >1 &&  last == 'a') {
+							resultTextArea.appendText("\u1b82");
+							startString +=1;
+							i -=1;
+						}else
 						if (isSingleChar != false && !getSinggleChar.equals(" ")) {
 							String returnSingleChar = translatorFromInputUser.singgleChar(getSinggleChar);
 //							sundaneseCharList.add(returnSingleChar);
@@ -273,11 +281,7 @@ public class MainFormController implements Initializable {
 							resultTextArea.appendText("  ");
 							startString +=1;
 							i -=1;
-						} else {
-							resultTextArea.appendText(getSinggleChar);
-							startString +=1;
-							i -=1;
-						}
+						} else {}
 					}
 				}
 				System.out.println("beres ngacek");
